@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIDazzle Child Care | Quick Application & HR Interview</title>
+  <meta name="description" content="KIDazzle Child Care educator quick application and corporate HR interview survey. Apply in 2-3 minutes. English and Spanish.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #172554;
+      --primary-light: #eff6ff;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --accent-light: #fffbeb;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --surface: #ffffff;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --shadow-card: 0 20px 40px -15px rgba(30, 58, 138, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(30, 58, 138, 0.05) 0px, transparent 55%),
+        radial-gradient(at 85% 85%, rgba(245, 158, 11, 0.06) 0px, transparent 55%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Branded Header */
+    .app-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 16px 24px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      background: #ffffff;
+      padding: 5px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      object-contain: contain;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      display: block;
+    }
+
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: #93c5fd;
+      font-weight: 500;
+      display: block;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .contact-badge:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    /* Main Container */
+    .main-content {
+      flex: 1;
+      max-width: 960px;
+      width: 100%;
+      margin: 24px auto 48px auto;
+      padding: 0 16px;
+    }
+
+    /* Intro Card */
+    .intro-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 50%, #f59e0b 100%);
+    }
+
+    .intro-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .tag-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .intro-card h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .intro-card p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .perks-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .perk-item i {
+      color: #1e3a8a;
+      background: #eff6ff;
+      padding: 6px;
+      border-radius: 50%;
+      font-size: 0.8rem;
+    }
+
+    /* Survey Card Wrapper */
+    .survey-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .survey-card-top {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .survey-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #f8fafc;
+    }
+
+    .survey-card-title i {
+      color: #f59e0b;
+    }
+
+    .survey-card-meta {
+      font-size: 0.78rem;
+      color: #94a3b8;
+    }
+
+    .survey-iframe-container {
+      width: 100%;
+      background: #ffffff;
+      min-height: 850px;
+      position: relative;
+    }
+
+    .survey-iframe-container iframe {
+      width: 100%;
+      min-height: 850px;
+      border: none;
+      display: block;
+    }
+
+    /* Footer */
+    .app-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .brand-subtitle {
+        display: none;
+      }
+      .intro-card {
+        padding: 20px 18px;
+      }
+      .intro-card h1 {
+        font-size: 1.35rem;
+      }
+      .perks-row {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top App Navigation Bar -->
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="https://kidazzle.com" class="brand-link" target="_blank" rel="noopener">
+        <img src="https://storage.googleapis.com/msgsndr/ZR2UvxPL2wlZNSvHjmJD/media/64ef561bad8c716760dfd435.png" alt="KIDazzle Logo" class="brand-logo">
+        <div>
+          <span class="brand-title">KIDazzle Child Care</span>
+          <span class="brand-subtitle">The Village That Grows With You</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <div class="badge-status">
+          <span class="pulse-dot"></span>
+          Now Hiring
+        </div>
+        <a href="tel:8774101002" class="contact-badge">
+          <i class="fa-solid fa-phone"></i>
+          <span>877-410-1002</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- Clean Intro Header -->
+    <section class="intro-card">
+      <div class="intro-header">
+        <span class="tag-pill">Quick Application</span>
+        <span style="font-size: 0.8rem; color: #64748b; font-weight: 500;">
+          <i class="fa-solid fa-globe" style="color: #3b82f6; margin-right: 4px;"></i> English &amp; Español
+        </span>
+      </div>
+      <h1>Educator Application &amp; HR Interview</h1>
+      <p>
+        Welcome! We are excited to learn more about you. Please complete this quick 2–3 minute survey below to submit your qualifications and schedule your interview with our hiring team.
+      </p>
+
+      <div class="perks-row">
+        <div class="perk-item">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>CDA / TCC Sponsorship</span>
+        </div>
+        <div class="perk-item">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <span>Competitive Hourly Wages</span>
+        </div>
+        <div class="perk-item">
+          <i class="fa-solid fa-star"></i>
+          <span>Star 6 Quality Rated</span>
+        </div>
+        <div class="perk-item">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Fast 24–48hr Response</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embedded LeadConnector Survey Form -->
+    <section class="survey-card">
+      <div class="survey-card-top">
+        <div class="survey-card-title">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>KIDazzle HR Corporate Interview Survey</span>
+        </div>
+        <div class="survey-card-meta">
+          <i class="fa-solid fa-lock" style="color: #10b981; margin-right: 4px;"></i> Secure &amp; Confidential
+        </div>
+      </div>
+
+      <div class="survey-iframe-container">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/survey/BOYM2PBNfJB2l53T8Wq9?notrack=true"
+          style="border:none;width:100%;min-height:850px;"
+          scrolling="no"
+          id="BOYM2PBNfJB2l53T8Wq9"
+          title="KIDazzle Educator Application & HR Interview">
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Simple Footer -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 KIDazzle Child Care, Inc. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://kidazzle.com" target="_blank" rel="noopener">KIDazzle.com</a>
+        <span>&bull;</span>
+        <a href="tel:8774101002">Questions? Call 877-410-1002</a>
+        <span>&bull;</span>
+        <a href="mailto:careers@kidazzle.com">careers@kidazzle.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
