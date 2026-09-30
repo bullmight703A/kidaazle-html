@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KIDazzle Child Care | CACFP Income Eligibility Statement (IES)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0084c7;           /* KIDazzle Blue */
+      --primary-hover: #026aa2;
+      --primary-light: #e0f2fe;
+      --secondary: #ff7f50;         /* KIDazzle Coral/Orange */
+      --secondary-hover: #f97316;
+      --accent-yellow: #f59e0b;     /* Sunny Yellow Accent */
+      --accent-yellow-light: #fef3c7;
+      --success: #10b981;           /* Bright Apple Green */
+      --success-light: #ecfdf5;
+      --danger: #ef4444;
+      --navy: #0a2540;              /* Brand Navy */
+      --navy-light: #1e3a8a;
+      --bg-page: #f8fafc;           /* Fresh, bright, welcoming background */
+      --surface: #ffffff;           /* Crisp clean white cards */
+      --surface-subtle: #f1f5f9;
+      --border: #e2e8f0;            /* Soft slate borders */
+      --border-focus: #0084c7;
+      --text-main: #0f172a;         /* High readability crisp text */
+      --text-muted: #64748b;        /* Professional muted text */
+      --shadow-sm: 0 2px 4px rgba(10, 37, 64, 0.04);
+      --shadow-card: 0 10px 25px -5px rgba(10, 37, 64, 0.06), 0 8px 10px -6px rgba(10, 37, 64, 0.03);
+      --shadow-elevated: 0 20px 35px -10px rgba(10, 37, 64, 0.1);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-page);
+      background-image: 
+        radial-gradient(at 10% 15%, rgba(0, 132, 199, 0.07) 0px, transparent 50%),
+        radial-gradient(at 90% 85%, rgba(255, 127, 80, 0.06) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.04) 0px, transparent 60%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    /* Top Navigation Header */
+    .top-header {
+      background: linear-gradient(135deg, #0a2540 0%, #0084c7 100%);
+      color: white;
+      padding: 16px 24px;
+      box-shadow: 0 4px 14px rgba(10, 37, 64, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-container {
+      background: #ffffff;
+      padding: 6px 12px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-img {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-meta h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      color: #ffffff;
+    }
+
+    .brand-meta span {
+      font-size: 0.82rem;
+      color: #bae6fd;
+      display: block;
+      font-weight: 500;
+    }
+
+    .header-badge {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .header-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #ffd700;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #ffd700;
+    }
+
+    /* Main Container */
+    .page-wrapper {
+      max-width: 860px;
+      width: 100%;
+      margin: 28px auto 60px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    /* Intro Card */
+    .intro-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #0084c7 0%, #ff7f50 50%, #f59e0b 100%);
+    }
+
+    .intro-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .intro-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .quick-highlight {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-hover);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Form Card */
+    .form-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .form-card, .intro-card {
+        padding: 22px 18px;
+      }
+      .header-badge {
+        display: none;
+      }
+    }
+
+    /* Section Headers */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 32px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .section-title .num {
+      background: linear-gradient(135deg, #0084c7 0%, #026aa2 100%);
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      font-weight: 800;
+      box-shadow: 0 2px 6px rgba(0, 132, 199, 0.3);
+    }
+
+    .section-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: -12px;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    /* Grids & Inputs */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group select {
+      background: #fafafa;
+      border: 1.5px solid var(--border);
+      color: var(--text-main);
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.96rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--border-focus);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 132, 199, 0.15);
+    }
+
+    .form-group input:disabled,
+    .form-group select:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background: #e2e8f0;
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Assistance Selection Pills */
+    .radio-pill-group {
+      display: flex;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .radio-pill {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      background: #f8fafc;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #475569;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .radio-pill input {
+      display: none;
+    }
+
+    .radio-pill:hover {
+      border-color: #cbd5e1;
+      background: #f1f5f9;
+    }
+
+    .radio-pill.selected {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 132, 199, 0.15);
+    }
+
+    /* SNAP / TANF Box */
+    #snapDetailsBox {
+      display: none;
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-top: 14px;
+    }
+
+    /* Sibling / Household Member Cards */
+    .sibling-card {
+      background: #f8fafc;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 14px;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .sibling-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sibling-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .sibling-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .remove-sibling-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .remove-sibling-btn:hover {
+      background: #fee2e2;
+    }
+
+    .add-sibling-btn {
+      background: #ffffff;
+      border: 2px dashed #0084c7;
+      color: #0084c7;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      margin-top: 6px;
+      margin-bottom: 24px;
+    }
+
+    .add-sibling-btn:hover {
+      background: var(--primary-light);
+      border-color: #026aa2;
+      color: #026aa2;
+    }
+
+    .enrolled-badge-banner {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    /* Live Determination Card */
+    #cacfpCard {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 800;
+      font-size: 0.84rem;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      background: #64748b;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .badge-free { background: #059669; }
+    .badge-reduced { background: #0284c7; }
+    .badge-paid { background: #d97706; }
+
+    /* Wet signature callout */
+    .wet-sig-callout {
+      background: #fffbeb;
+      border-left: 5px solid #f59e0b;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      font-size: 0.92rem;
+      color: #92400e;
+      line-height: 1.5;
+      box-shadow: 0 2px 6px rgba(245, 158, 11, 0.08);
+    }
+
+    /* Submit CTA Button */
+    .submit-btn {
+      background: linear-gradient(135deg, #ff7f50 0%, #ff6333 100%);
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      padding: 18px 28px;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 6px 20px rgba(255, 127, 80, 0.35);
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 127, 80, 0.45);
+      background: linear-gradient(135deg, #ff6333 0%, #f97316 100%);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Success Screen */
+    #successScreen {
+      display: none;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+    }
+
+    #successScreen .icon {
+      font-size: 3.5rem;
+      margin-bottom: 16px;
+      animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #0084c7 0%, #026aa2 100%);
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 132, 199, 0.25);
+      margin: 8px 6px;
+      transition: all 0.2s ease;
+    }
+
+    .dl-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 132, 199, 0.35);
+    }
+
+    .dl-btn.sibling {
+      background: linear-gradient(135deg, #ff7f50 0%, #f97316 100%);
+      box-shadow: 0 4px 14px rgba(255, 127, 80, 0.25);
+    }
+
+    .dl-btn.sibling:hover {
+      box-shadow: 0 6px 18px rgba(255, 127, 80, 0.35);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="top-header">
+    <div class="header-content">
+      <div class="brand-group">
+        <div class="logo-container">
+          <img src="/kidazzle-logo.png" alt="KIDazzle Child Care" class="logo-img" onerror="this.src='https://assets.cdn.filesafe.space/ZR2UvxPL2wlZNSvHjmJD/media/64ef561bad8c716760dfd435.png'"/>
+        </div>
+        <div class="brand-meta">
+          <h1>KIDazzle Child Care</h1>
+          <span>CACFP Income Eligibility Quick Renewal (2026–2027)</span>
+        </div>
+      </div>
+      <div class="header-badge">
+        Peachtree Summit Midtown
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <!-- Intro Card -->
+    <div class="intro-card">
+      <div class="intro-title">
+        <span>📋</span> Standalone Annual Meal Benefit Renewal
+      </div>
+      <p class="intro-desc">
+        Welcome to the official KIDazzle Child Care quick meal eligibility renewal. Complete this 
+        <span class="quick-highlight">1-page CACFP Income Eligibility Statement</span> in under 2 minutes. 
+        If you have multiple children attending KIDazzle, add them below and the system will automatically file individual certified forms for all enrolled siblings simultaneously.
+      </p>
+    </div>
+
+    <!-- Main Interactive Form Card -->
+    <div class="form-card" id="formWrapper">
+      <form id="iesForm">
+        <input type="hidden" name="form_type" value="ies_only"/>
+
+        <!-- SECTION 1: CAMPUS -->
+        <div class="section-title">
+          <span class="num">1</span> Campus / Center Location
+        </div>
+        <div class="section-subtitle">
+          Select your enrolled KIDazzle campus. Pre-selected to Midtown Atlanta.
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="location">KIDazzle Facility Location</label>
+            <select id="location" name="location" required>
+              <option value="Peachtree Summit (Midtown Atlanta)" selected>Peachtree Summit (Midtown Atlanta) — 401 W Peachtree St NW</option>
+              <option value="Atlanta Downtown">Atlanta Downtown — 61 Forsyth St SW</option>
+              <option value="West End">West End — 831 York Ave</option>
+              <option value="Headquarters">Headquarters — 674 Joseph E Lowery Blvd</option>
+              <option value="College Park">College Park — 1701 Columbia Ave</option>
+              <option value="Hampton">Hampton — 49 Woolsey Rd</option>
+              <option value="Memphis">Memphis — 3198 Independent Dr</option>
+              <option value="Doral / Miami">Doral / Miami — 7500 SW 58th St</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- SECTION 2: PRIMARY ENROLLED CHILD -->
+        <div class="section-title">
+          <span class="num">2</span> Primary Child Information
+        </div>
+        <div class="section-subtitle">
+          Enter the information for the primary child receiving care at KIDazzle.
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="child_first_name">Child First Name</label>
+            <input type="text" id="child_first_name" name="child_first_name" placeholder="First name" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="child_last_name">Child Last Name</label>
+            <input type="text" id="child_last_name" name="child_last_name" placeholder="Last name" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="child_dob">Date of Birth</label>
+            <input type="date" id="child_dob" name="child_dob" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="child_classroom">Current Classroom / Age Group</label>
+            <select id="child_classroom" name="child_classroom" required>
+              <option value="Infant">Infant Room (6 wks – 12 mos)</option>
+              <option value="Toddler">Toddler Room (1 Year Old)</option>
+              <option value="Two-Year-Old" selected>Two-Year-Old Classroom (2s)</option>
+              <option value="Three-Year-Old">Three-Year-Old Classroom (3s)</option>
+              <option value="GA Lottery Pre-K">Georgia Lottery Pre-K (4 Years)</option>
+              <option value="School Age">School Age / Afterschool (5–12 Years)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- SECTION 3: SIBLINGS & OTHER HOUSEHOLD MEMBERS -->
+        <div class="section-title">
+          <span class="num">3</span> Siblings &amp; Additional Household Members
+        </div>
+        <div class="section-subtitle">
+          List any other children or household members living with you. If any sibling also attends KIDazzle in this building, check the box and we will automatically file their certified IES form simultaneously.
+        </div>
+
+        <div id="siblingsContainer"></div>
+
+        <button type="button" class="add-sibling-btn" id="addSiblingBtn">
+          <span>➕</span> Add Sibling or Other Household Member
+        </button>
+
+        <!-- SECTION 4: PARENT / GUARDIAN & CONTACTS -->
+        <div class="section-title">
+          <span class="num">4</span> Parent / Guardian Contacts
+        </div>
+        <div class="section-subtitle">
+          Contact information for the primary adult household member and optional second guardian.
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="parent_first_name">Primary Guardian First Name</label>
+            <input type="text" id="parent_first_name" name="parent_first_name" placeholder="Your first name" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="parent_last_name">Primary Guardian Last Name</label>
+            <input type="text" id="parent_last_name" name="parent_last_name" placeholder="Your last name" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Primary Mobile Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(404) 555-0199" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="parent@example.com" required/>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="address" placeholder="401 W Peachtree St NW" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" value="Atlanta" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip" placeholder="30308" maxlength="5" required/>
+          </div>
+
+          <!-- Additional Adult Household Members Repeater (Up to 5 total adults) -->
+          <div class="full-width" style="margin-top: 14px;">
+            <div id="additionalMembersContainer"></div>
+
+            <button type="button" class="add-sibling-btn" id="addMemberBtn" style="border-color: #ff7f50; color: #ff7f50; margin-top: 4px; margin-bottom: 8px;">
+              <span>➕</span> Add Another Parent, Guardian, or Adult Household Member
+            </button>
+            <div id="memberLimitNotice" style="display:none; font-size:0.86rem; color:#059669; font-weight:700; text-align:center; padding:10px; background:#ecfdf5; border-radius:10px; border:1px solid #a7f3d0; margin-top:8px;">
+              ✅ Maximum 5 adult household members reached (matches Part II B of official DECAL statement).
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: CATEGORICAL ASSISTANCE (SNAP / TANF / CAPS) -->
+        <div class="section-title">
+          <span class="num">5</span> Categorical Assistance (SNAP / TANF)
+        </div>
+        <div class="section-subtitle">
+          Does anyone in your household receive SNAP (Food Stamps), TANF, or CAPS benefits?
+        </div>
+
+        <div class="radio-pill-group">
+          <div class="radio-pill selected" id="pillAssistanceNo">
+            <input type="radio" name="receives_assistance" value="no" checked/>
+            <span>❌ No, We Do Not Receive Benefits</span>
+          </div>
+          <div class="radio-pill" id="pillAssistanceYes">
+            <input type="radio" name="receives_assistance" value="yes"/>
+            <span>✅ Yes, We Receive SNAP or TANF</span>
+          </div>
+        </div>
+
+        <!-- Expanded SNAP / TANF Case Number Box -->
+        <div id="snapDetailsBox">
+          <div class="form-group full-width">
+            <label for="snap_case_number" style="color:#065f46; font-size:0.88rem; font-weight:800;">
+              Georgia Gateway SNAP or TANF Case Number
+            </label>
+            <input type="text" id="snap_case_number" name="snap_case_number" placeholder="Enter your 9-digit Gateway Case # or Client ID" style="background:#ffffff; border-color:#86efac;"/>
+            <div style="font-size: 0.82rem; color: #047857; margin-top: 6px; line-height: 1.4;">
+              ✨ <strong>100% Free Meals Qualified:</strong> Under USDA CACFP regulations, providing your valid Georgia Gateway Case Number waives income reporting and Social Security requirements.
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: HOUSEHOLD SIZE & INCOME DETERMINATION -->
+        <div class="section-title">
+          <span class="num">6</span> Household Size &amp; Income Determination
+        </div>
+        <div class="section-subtitle">
+          Income before taxes from all household members combined (skip if SNAP/TANF is provided).
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="household_size">Total Household Size</label>
+            <input type="number" id="household_size" name="household_size" value="2" min="1" max="20" required/>
+            <span class="hint">Includes all adults and children living in your home</span>
+          </div>
+
+          <div class="form-group">
+            <label for="monthly_income">Total Monthly Household Income ($)</label>
+            <input type="number" id="monthly_income" name="monthly_income" placeholder="e.g. 2800" min="0" step="10" required/>
+            <span class="hint" id="incomeHint">Gross monthly income before taxes</span>
+          </div>
+
+          <!-- Reactive Determination Card -->
+          <div class="full-width" id="cacfpCard">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
+              <span style="font-weight:700; font-size:0.92rem; color:var(--navy);">
+                OFFICIAL CACFP MEAL STATUS (2026–2027 DECAL)
+              </span>
+              <span class="badge" id="cacfpBadge">CALCULATING...</span>
+            </div>
+            <div id="cacfpDetails" style="font-size:0.88rem; color:#475569; line-height:1.5;"></div>
+            
+            <button type="button" id="toggleGuidelinesBtn" style="background:none; border:none; color:var(--primary); font-size:0.82rem; font-weight:700; cursor:pointer; text-decoration:underline; margin-top:8px; display:inline-block;">
+              📊 View Official 2026–2027 USDA DECAL Income Scale
+            </button>
+
+            <!-- Guidelines Table Container -->
+            <div id="guidelinesTableContainer" style="display:none; margin-top:14px; overflow-x:auto;">
+              <table style="width:100%; border-collapse:collapse; font-size:0.8rem; text-align:right; background:#ffffff; border-radius:8px; overflow:hidden; border:1px solid #e2e8f0;">
+                <thead>
+                  <tr style="background:#f1f5f9; color:#1e293b; font-weight:700;">
+                    <th style="padding:6px 10px; text-align:left;">Household</th>
+                    <th style="padding:6px 10px;">Free (Mo)</th>
+                    <th style="padding:6px 10px;">Free (Yr)</th>
+                    <th style="padding:6px 10px;">Reduced (Mo)</th>
+                    <th style="padding:6px 10px;">Reduced (Yr)</th>
+                  </tr>
+                </thead>
+                <tbody style="color:#475569;">
+                  <tr><td style="padding:5px 10px; text-align:left;">1</td><td>$1,729</td><td>$20,748</td><td>$2,461</td><td>$29,526</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">2</td><td>$2,345</td><td>$28,132</td><td>$3,337</td><td>$40,034</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">3</td><td>$2,960</td><td>$35,516</td><td>$4,212</td><td>$50,542</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">4</td><td>$3,575</td><td>$42,900</td><td>$5,088</td><td>$61,050</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">5</td><td>$4,191</td><td>$50,284</td><td>$5,964</td><td>$71,558</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">6</td><td>$4,806</td><td>$57,668</td><td>$6,839</td><td>$82,066</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">7</td><td>$5,421</td><td>$65,052</td><td>$7,715</td><td>$92,574</td></tr>
+                  <tr><td style="padding:5px 10px; text-align:left;">8</td><td>$6,037</td><td>$72,436</td><td>$8,591</td><td>$103,082</td></tr>
+                  <tr style="font-style:italic; color:#64748b;"><td style="padding:5px 10px; text-align:left;">+ Each Add'l</td><td>+$616</td><td>+$7,384</td><td>+$876</td><td>+$10,508</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="form-group full-width" id="ssnGroup" style="margin-top:10px;">
+            <label for="ssn">Last 4 Digits of Social Security Number (SSN)</label>
+            <input type="text" id="ssn" name="ssn" placeholder="1234" maxlength="4" required/>
+            <div style="margin-top:6px; font-size:0.86rem; color:var(--text-muted);">
+              <input type="checkbox" id="no_ssn" name="no_ssn" style="width:16px; height:16px; display:inline-block; vertical-align:middle; margin-right:6px; cursor:pointer;"/>
+              <label for="no_ssn" style="display:inline; text-transform:none; font-weight:normal; cursor:pointer;">I do not have a Social Security Number (SSN)</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 7: CERTIFICATION & WET SIGNATURE NOTICE -->
+        <div class="section-title">
+          <span class="num">7</span> Certification &amp; Submission
+        </div>
+
+        <div class="wet-sig-callout">
+          <strong>📝 Important Official Wet Signature Notice:</strong><br/>
+          Per Georgia DECAL Bright from the Start compliance guidelines, the signature line on your official 1-page IES document will be left blank for your <strong>physical wet pen signature</strong> upon printout or at center check-in.
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="sig_printed_name">Printed Legal Name of Adult Household Member</label>
+            <input type="text" id="sig_printed_name" name="sig_printed_name" placeholder="Type your full legal name" required/>
+            <span class="hint">I certify that all of the above information is true and correct and that all income is reported.</span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span>🚀</span> Submit &amp; Generate Official 1-Page IES Documents
+        </button>
+      </form>
+    </div>
+
+    <!-- SUCCESS SCREEN -->
+    <div class="card" id="successScreen">
+      <div class="icon">🎉</div>
+      <h2 style="font-family:'Outfit',sans-serif; font-size:1.6rem; color:var(--navy); margin-bottom:10px;">
+        CACFP IES Document(s) Generated Successfully!
+      </h2>
+      <p id="successSummary" style="color:var(--text-muted); font-size:0.98rem; max-width:560px; margin:0 auto 24px auto; line-height:1.5;">
+        Your 2026–2027 CACFP Income Eligibility Statement has been created and your meal status is certified on the Master Roster.
+      </p>
+
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px; margin:0 auto 28px auto; max-width:540px; text-align:left; font-size:0.94rem; line-height:1.7;">
+        <div><strong>Facility:</strong> <span id="resFacility"></span></div>
+        <div><strong>Primary Child:</strong> <span id="resChild"></span></div>
+        <div><strong>Meal Status:</strong> <span id="resCategory" style="color:var(--primary); font-weight:800;"></span></div>
+        <div id="resSiblingsRow" style="display:none; margin-top:4px;">
+          <strong>Enrolled Siblings Included:</strong> <span id="resSiblings"></span>
+        </div>
+        <div><strong>Compliance Format:</strong> Clean 1-Page Official DECAL IES (Signature line blank for wet pen signing)</div>
+      </div>
+
+      <div id="downloadButtonsContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+        <a id="downloadBtn" href="#" target="_blank" class="dl-btn">
+          📄 Download Primary Child IES PDF
+        </a>
+      </div>
+
+      <div style="margin-top:28px;">
+        <button type="button" onclick="location.reload()" style="background:none; border:none; color:var(--primary); font-weight:600; cursor:pointer; text-decoration:underline;">
+          Submit for another family or start over
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    KIDazzle Child Care &amp; Learning Centers • Bright from the Start (DECAL) CACFP Program
+  </footer>
+
+  <script>
+    // 2026-2027 USDA DECAL Income Guidelines
+    const guidelines = {
+      1: { freeMo: 1729, redMo: 2461, freeYr: 20748, redYr: 29526 },
+      2: { freeMo: 2345, redMo: 3337, freeYr: 28132, redYr: 40034 },
+      3: { freeMo: 2960, redMo: 4212, freeYr: 35516, redYr: 50542 },
+      4: { freeMo: 3575, redMo: 5088, freeYr: 42900, redYr: 61050 },
+      5: { freeMo: 4191, redMo: 5964, freeYr: 50284, redYr: 71558 },
+      6: { freeMo: 4806, redMo: 6839, freeYr: 57668, redYr: 82066 },
+      7: { freeMo: 5421, redMo: 7715, freeYr: 65052, redYr: 92574 },
+      8: { freeMo: 6037, redMo: 8591, freeYr: 72436, redYr: 103082 },
+      add: { freeMo: 616, redMo: 876, freeYr: 7384, redYr: 10508 }
+    };
+
+    function getLimits(hh) {
+      const size = Math.max(1, parseInt(hh, 10) || 1);
+      if (size <= 8) return { size, ...guidelines[size] };
+      const extra = size - 8;
+      return {
+        size,
+        freeMo: guidelines[8].freeMo + extra * guidelines.add.freeMo,
+        redMo: guidelines[8].redMo + extra * guidelines.add.redMo,
+        freeYr: guidelines[8].freeYr + extra * guidelines.add.freeYr,
+        redYr: guidelines[8].redYr + extra * guidelines.add.redYr
+      };
+    }
+
+    const pillNo = document.getElementById('pillAssistanceNo');
+    const pillYes = document.getElementById('pillAssistanceYes');
+    const snapBox = document.getElementById('snapDetailsBox');
+    const snapInput = document.getElementById('snap_case_number');
+    const hhInput = document.getElementById('household_size');
+    const incomeInput = document.getElementById('monthly_income');
+    const incomeHint = document.getElementById('incomeHint');
+    const ssnInput = document.getElementById('ssn');
+    const noSsnCheckbox = document.getElementById('no_ssn');
+    const cacfpCard = document.getElementById('cacfpCard');
+    const cacfpBadge = document.getElementById('cacfpBadge');
+    const cacfpDetails = document.getElementById('cacfpDetails');
+    const toggleBtn = document.getElementById('toggleGuidelinesBtn');
+    const tableContainer = document.getElementById('guidelinesTableContainer');
+    const additionalMembersContainer = document.getElementById('additionalMembersContainer');
+    const addMemberBtn = document.getElementById('addMemberBtn');
+    const memberLimitNotice = document.getElementById('memberLimitNotice');
+    const siblingsContainer = document.getElementById('siblingsContainer');
+    const addSiblingBtn = document.getElementById('addSiblingBtn');
+
+    let memberIndex = 1;
+
+    function updateMemberCardsUI() {
+      const cards = additionalMembersContainer.querySelectorAll('.additional-member-card');
+      cards.forEach((card, idx) => {
+        const memberNum = idx + 2; // Member #2, #3, #4, #5
+        const titleEl = card.querySelector('.member-card-title-text');
+        if (titleEl) {
+          titleEl.innerText = `Adult Household Member / Guardian #${memberNum}`;
+        }
+      });
+
+      // Max 5 adults total: 1 Primary + up to 4 additional
+      const totalAdults = 1 + cards.length;
+      if (totalAdults >= 5) {
+        addMemberBtn.style.display = 'none';
+        memberLimitNotice.style.display = 'block';
+      } else {
+        addMemberBtn.style.display = 'flex';
+        memberLimitNotice.style.display = 'none';
+      }
+      recalculateHouseholdSize();
+    }
+
+    function addMemberRow() {
+      const currentCards = additionalMembersContainer.querySelectorAll('.additional-member-card');
+      if (currentCards.length >= 4) return;
+
+      memberIndex++;
+      const id = memberIndex;
+      const card = document.createElement('div');
+      card.className = 'sibling-card additional-member-card';
+      card.id = `member_card_${id}`;
+      card.style.borderLeft = '4px solid var(--secondary)';
+      card.style.background = '#ffffff';
+
+      card.innerHTML = `
+        <div class="sibling-card-header">
+          <div class="sibling-card-title">
+            <span>👤</span> <span class="member-card-title-text">Adult Household Member / Guardian #${currentCards.length + 2}</span>
+          </div>
+          <button type="button" class="remove-sibling-btn" onclick="removeMemberRow(${id})">
+            ✕ Remove
+          </button>
+        </div>
+        <div class="form-grid" style="margin-bottom:0;">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="m-first" name="m_first_${id}" placeholder="First name" required/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="m-last" name="m_last_${id}" placeholder="Last name" required/>
+          </div>
+          <div class="form-group">
+            <label>Relationship to Child</label>
+            <select class="m-rel" name="m_rel_${id}">
+              <option value="Second Parent / Co-Parent" selected>Second Parent / Co-Parent</option>
+              <option value="Father">Father</option>
+              <option value="Mother">Mother</option>
+              <option value="Spouse / Partner">Spouse / Partner</option>
+              <option value="Grandparent">Grandparent</option>
+              <option value="Adult Sibling (18+)">Adult Sibling (18+)</option>
+              <option value="Aunt / Uncle">Aunt / Uncle</option>
+              <option value="Other Adult Member">Other Adult Household Member</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mobile Phone (Optional)</label>
+            <input type="tel" class="m-phone" name="m_phone_${id}" placeholder="(404) 555-0100"/>
+          </div>
+          <div class="form-group full-width">
+            <label>Gross Monthly Earnings / Income (Optional)</label>
+            <input type="number" class="m-income" name="m_income_${id}" placeholder="0 if none (wages, welfare, pensions, child support)" min="0" step="10"/>
+            <span class="hint">Report gross monthly earnings before deductions for Part II B of official DECAL statement.</span>
+          </div>
+        </div>
+      `;
+      additionalMembersContainer.appendChild(card);
+      updateMemberCardsUI();
+    }
+
+    window.removeMemberRow = function(id) {
+      const card = document.getElementById(`member_card_${id}`);
+      if (card) {
+        card.remove();
+        updateMemberCardsUI();
+      }
+    };
+
+    addMemberBtn.addEventListener('click', addMemberRow);
+
+    // Assistance Selection
+    function updateAssistanceState(isYes) {
+      pillYes.classList.toggle('selected', isYes);
+      pillNo.classList.toggle('selected', !isYes);
+      snapBox.style.display = isYes ? 'block' : 'none';
+
+      if (isYes) {
+        incomeInput.disabled = true;
+        incomeInput.required = false;
+        incomeInput.value = '';
+        incomeHint.innerText = 'Income reporting waived with SNAP/TANF case number on file.';
+        incomeHint.style.color = '#059669';
+        ssnInput.disabled = true;
+        ssnInput.required = false;
+        snapInput.required = true;
+      } else {
+        incomeInput.disabled = false;
+        incomeInput.required = true;
+        incomeHint.innerText = 'Gross monthly income before taxes';
+        incomeHint.style.color = 'var(--text-muted)';
+        snapInput.required = false;
+        if (noSsnCheckbox.checked) {
+          ssnInput.disabled = true;
+          ssnInput.required = false;
+        } else {
+          ssnInput.disabled = false;
+          ssnInput.required = true;
+        }
+      }
+      updateDetermination();
+    }
+
+    pillYes.addEventListener('click', () => {
+      pillYes.querySelector('input').checked = true;
+      updateAssistanceState(true);
+    });
+
+    pillNo.addEventListener('click', () => {
+      pillNo.querySelector('input').checked = true;
+      updateAssistanceState(false);
+    });
+
+    noSsnCheckbox.addEventListener('change', () => {
+      if (noSsnCheckbox.checked) {
+        ssnInput.disabled = true;
+        ssnInput.required = false;
+        ssnInput.value = '';
+      } else {
+        const isYes = pillYes.querySelector('input').checked;
+        if (!isYes) {
+          ssnInput.disabled = false;
+          ssnInput.required = true;
+        }
+      }
+    });
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = tableContainer.style.display === 'none';
+      tableContainer.style.display = isHidden ? 'block' : 'none';
+      toggleBtn.innerText = isHidden ? '▲ Hide Income Guidelines Table' : '📊 View Official 2026–2027 USDA DECAL Income Scale';
+    });
+
+    // Dynamic Sibling Addition
+    let siblingIndex = 0;
+    function addSiblingRow() {
+      siblingIndex++;
+      const id = siblingIndex;
+      const card = document.createElement('div');
+      card.className = 'sibling-card';
+      card.id = `sibling_card_${id}`;
+      card.innerHTML = `
+        <div class="sibling-card-header">
+          <div class="sibling-card-title">
+            <span>🧒</span> Household Member / Sibling #${id}
+          </div>
+          <button type="button" class="remove-sibling-btn" onclick="removeSiblingRow(${id})">
+            ✕ Remove
+          </button>
+        </div>
+        <div class="form-grid" style="margin-bottom:10px;">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="sib-first" name="sib_first_${id}" placeholder="First name" required/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="sib-last" name="sib_last_${id}" placeholder="Last name" required/>
+          </div>
+          <div class="form-group">
+            <label>Relationship</label>
+            <select class="sib-rel" name="sib_rel_${id}">
+              <option value="Brother" selected>Brother</option>
+              <option value="Sister">Sister</option>
+              <option value="Other Child">Other Child in Household</option>
+              <option value="Grandparent">Grandparent</option>
+              <option value="Adult Member">Adult Household Member</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date of Birth / Age</label>
+            <input type="date" class="sib-dob" name="sib_dob_${id}"/>
+          </div>
+          <div class="full-width" style="margin-top:4px;">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; text-transform:none; font-weight:700; color:var(--navy); font-size:0.92rem;">
+              <input type="checkbox" class="sib-attends" name="sib_attends_${id}" style="width:18px; height:18px; cursor:pointer;" onchange="toggleSiblingEnrolled(${id})"/>
+              ☑ This child is also enrolled / attending classes at KIDazzle
+            </label>
+          </div>
+          <div id="sib_classroom_group_${id}" class="full-width" style="display:none; margin-top:8px;">
+            <div class="form-group">
+              <label>Sibling Classroom / Age Group</label>
+              <select class="sib-classroom" name="sib_classroom_${id}">
+                <option value="Infant">Infant Room (6 wks – 12 mos)</option>
+                <option value="Toddler" selected>Toddler Room (1 Year Old)</option>
+                <option value="Two-Year-Old">Two-Year-Old Classroom (2s)</option>
+                <option value="Three-Year-Old">Three-Year-Old Classroom (3s)</option>
+                <option value="GA Lottery Pre-K">Georgia Lottery Pre-K (4 Years)</option>
+                <option value="School Age">School Age / Afterschool (5–12 Years)</option>
+              </select>
+            </div>
+            <div class="enrolled-badge-banner">
+              <span>✨</span>
+              <span><strong>Automated Dual Filing:</strong> An official 1-Page IES will be automatically generated and filed for this sibling on the CACFP Master Roster.</span>
+            </div>
+          </div>
+        </div>
+      `;
+      siblingsContainer.appendChild(card);
+      recalculateHouseholdSize();
+    }
+
+    window.removeSiblingRow = function(id) {
+      const card = document.getElementById(`sibling_card_${id}`);
+      if (card) {
+        card.remove();
+        recalculateHouseholdSize();
+      }
+    };
+
+    window.toggleSiblingEnrolled = function(id) {
+      const card = document.getElementById(`sibling_card_${id}`);
+      if (!card) return;
+      const checkbox = card.querySelector('.sib-attends');
+      const group = document.getElementById(`sib_classroom_group_${id}`);
+      if (group) group.style.display = checkbox.checked ? 'block' : 'none';
+    };
+
+    addSiblingBtn.addEventListener('click', addSiblingRow);
+
+    function recalculateHouseholdSize() {
+      // 1 Primary Child + 1 Primary Parent + additional adult members count + siblings count
+      const sibCount = siblingsContainer.querySelectorAll('.sibling-card').length;
+      const adultMemberCount = additionalMembersContainer.querySelectorAll('.additional-member-card').length;
+      const total = 1 + 1 + adultMemberCount + sibCount;
+      hhInput.value = total;
+      updateDetermination();
+    }
+
+    // Dynamic Determination
+    function updateDetermination() {
+      const isYes = pillYes.querySelector('input').checked;
+      const hh = Math.max(1, parseInt(hhInput.value, 10) || 1);
+      const limits = getLimits(hh);
+
+      if (isYes) {
+        cacfpBadge.className = 'badge badge-free';
+        cacfpBadge.innerText = 'QUALIFIES: FREE MEALS';
+        cacfpDetails.innerHTML = `<strong>Categorical Free Eligibility:</strong> Household receives SNAP/TANF benefits. Income guidelines are waived per USDA regulations.`;
+        cacfpCard.style.borderColor = '#86efac';
+        cacfpCard.style.background = '#f0fdf4';
+        return;
+      }
+
+      const incomeVal = parseFloat(incomeInput.value);
+      if (isNaN(incomeVal) || incomeVal < 0) {
+        cacfpBadge.className = 'badge';
+        cacfpBadge.innerText = 'ENTER INCOME';
+        cacfpDetails.innerHTML = `Enter your monthly household income to calculate eligibility for a household of <strong>${hh}</strong>.`;
+        cacfpCard.style.borderColor = '#e2e8f0';
+        cacfpCard.style.background = '#f8fafc';
+        return;
+      }
+
+      const annual = incomeVal * 12;
+      if (annual <= limits.freeYr) {
+        cacfpBadge.className = 'badge badge-free';
+        cacfpBadge.innerText = 'QUALIFIES: FREE MEALS';
+        cacfpDetails.innerHTML = `✅ <strong>Free Meal Benefit Qualified:</strong> Your household income ($${incomeVal.toLocaleString()}/mo or $${annual.toLocaleString()}/yr) is within the Federal Free Meal limit ($${limits.freeMo.toLocaleString()}/mo or $${limits.freeYr.toLocaleString()}/yr for household of ${hh}).`;
+        cacfpCard.style.borderColor = '#86efac';
+        cacfpCard.style.background = '#f0fdf4';
+      } else if (annual <= limits.redYr) {
+        cacfpBadge.className = 'badge badge-reduced';
+        cacfpBadge.innerText = 'QUALIFIES: REDUCED MEALS';
+        cacfpDetails.innerHTML = `✅ <strong>Reduced-Price Qualified:</strong> Your household income is within the Reduced-Price limit ($${limits.redMo.toLocaleString()}/mo or $${limits.redYr.toLocaleString()}/yr for household of ${hh}).`;
+        cacfpCard.style.borderColor = '#93c5fd';
+        cacfpCard.style.background = '#eff6ff';
+      } else {
+        cacfpBadge.className = 'badge badge-paid';
+        cacfpBadge.innerText = 'STANDARD RATE (PAID)';
+        cacfpDetails.innerHTML = `ℹ️ <strong>Standard Meal Status:</strong> Household income exceeds the federal guidelines for Free/Reduced categories. Participant is classified as Paid.`;
+        cacfpCard.style.borderColor = '#fed7aa';
+        cacfpCard.style.background = '#fff7ed';
+      }
+    }
+
+    hhInput.addEventListener('input', updateDetermination);
+    incomeInput.addEventListener('input', updateDetermination);
+
+    // Form Submission
+    const form = document.getElementById('iesForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formWrapper = document.getElementById('formWrapper');
+    const successScreen = document.getElementById('successScreen');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Collect Siblings
+      const siblingCards = siblingsContainer.querySelectorAll('.sibling-card');
+      const siblingsData = [];
+      siblingCards.forEach(c => {
+        const first = c.querySelector('.sib-first')?.value?.trim();
+        const last = c.querySelector('.sib-last')?.value?.trim();
+        const rel = c.querySelector('.sib-rel')?.value;
+        const dob = c.querySelector('.sib-dob')?.value;
+        const attends = c.querySelector('.sib-attends')?.checked || false;
+        const classroom = c.querySelector('.sib-classroom')?.value || 'Toddler';
+        if (first || last) {
+          siblingsData.push({
+            first_name: first,
+            last_name: last,
+            relationship: rel,
+            dob: dob,
+            attends_kidazzle: attends,
+            classroom: classroom
+          });
+        }
+      });
+
+      // Collect Additional Adult Household Members
+      const memberCards = additionalMembersContainer.querySelectorAll('.additional-member-card');
+      const additionalMembersData = [];
+      memberCards.forEach(c => {
+        const first = c.querySelector('.m-first')?.value?.trim();
+        const last = c.querySelector('.m-last')?.value?.trim();
+        const rel = c.querySelector('.m-rel')?.value;
+        const phone = c.querySelector('.m-phone')?.value?.trim();
+        const income = c.querySelector('.m-income')?.value?.trim();
+        if (first || last) {
+          additionalMembersData.push({
+            first_name: first,
+            last_name: last,
+            relationship: rel,
+            phone: phone,
+            monthly_income: income || '0'
+          });
+        }
+      });
+
+      const formData = new FormData(form);
+      const payload = {};
+      formData.forEach((val, key) => {
+        if (!key.startsWith('sib_') && !key.startsWith('m_')) payload[key] = val;
+      });
+
+      payload.form_type = 'ies_only';
+      payload.program_type = 'ies_only';
+      payload.additional_members = additionalMembersData;
+      payload.has_second_parent = additionalMembersData.length > 0;
+      if (additionalMembersData.length > 0) {
+        payload.parent2_first_name = additionalMembersData[0].first_name;
+        payload.parent2_last_name = additionalMembersData[0].last_name;
+        payload.parent2_relationship = additionalMembersData[0].relationship;
+        payload.parent2_phone = additionalMembersData[0].phone;
+      }
+      payload.siblings = siblingsData;
+      if (noSsnCheckbox.checked) payload.no_ssn = true;
+
+      // Auto-set signature printed name to match guardian if empty
+      if (!payload.sig_printed_name) {
+        payload.sig_printed_name = `${payload.parent_first_name || ''} ${payload.parent_last_name || ''}`.trim();
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>⏳</span> Generating Official 1-Page IES Document(s)...`;
+
+      try {
+        const resp = await fetch('/api/kidazzle/intake', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await resp.json();
+
+        if (data.success) {
+          formWrapper.style.display = 'none';
+          document.querySelector('.intro-card').style.display = 'none';
+          successScreen.style.display = 'block';
+
+          document.getElementById('resFacility').innerText = data.facility || payload.location;
+          document.getElementById('resChild').innerText = data.child_name || `${payload.child_first_name} ${payload.child_last_name}`;
+          document.getElementById('resCategory').innerText = data.cacfp_category || 'Certified';
+
+          const btnContainer = document.getElementById('downloadButtonsContainer');
+          btnContainer.innerHTML = '';
+
+          // Primary Child PDF button
+          const primBtn = document.createElement('a');
+          primBtn.href = data.download_url || '#';
+          primBtn.target = '_blank';
+          primBtn.className = 'dl-btn';
+          primBtn.innerHTML = `📄 Download ${payload.child_first_name}'s Official 1-Page IES (PDF)`;
+          btnContainer.appendChild(primBtn);
+
+          // Sibling PDF buttons if any
+          if (data.sibling_files && data.sibling_files.length > 0) {
+            document.getElementById('resSiblingsRow').style.display = 'block';
+            const sibNames = data.sibling_files.map(s => `${s.child_name} (${s.classroom})`).join(', ');
+            document.getElementById('resSiblings').innerText = sibNames;
+
+            data.sibling_files.forEach(s => {
+              const sibBtn = document.createElement('a');
+              sibBtn.href = s.download_url;
+              sibBtn.target = '_blank';
+              sibBtn.className = 'dl-btn sibling';
+              sibBtn.innerHTML = `🧒 Download Sibling IES: ${s.child_name} (${s.classroom})`;
+              btnContainer.appendChild(sibBtn);
+            });
+          }
+
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          alert('Submission error: ' + (data.error || 'Please check your inputs and try again.'));
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span>🚀</span> Submit &amp; Generate Official 1-Page IES Documents`;
+        }
+      } catch (err) {
+        console.error('Submission failed:', err);
+        alert('Server connection error. Please try again or notify the center.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>🚀</span> Submit &amp; Generate Official 1-Page IES Documents`;
+      }
+    });
+
+    // Run initial determination check
+    updateDetermination();
+  </script>
+</body>
+</html>
