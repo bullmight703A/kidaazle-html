@@ -1568,13 +1568,48 @@
         startDateInput.value = nextWeek.toISOString().split('T')[0];
       }
 
-      // Check URL params for location pre-selection (e.g. ?location=memphis or ?campus=hampton)
+      // Check URL params for location and UTM attribution
       const urlParams = new URLSearchParams(window.location.search);
       const loc = urlParams.get('campus') || urlParams.get('location');
       if (loc && CAMPUSES[loc.toLowerCase()]) {
         const card = document.querySelector(`input[name="campusRadio"][value="${loc.toLowerCase()}"]`)?.closest('.campus-radio-card');
         if (card) selectCampus(loc.toLowerCase(), card);
       }
+
+      // Store Ad Attribution in window and sessionStorage
+      window.adAttribution = {
+        utmSource: urlParams.get('utm_source') || (document.referrer.includes('facebook') ? 'facebook' : document.referrer.includes('instagram') ? 'instagram' : 'direct'),
+        utmMedium: urlParams.get('utm_medium') || (urlParams.get('utm_source') ? 'paid_social' : 'organic'),
+        utmCampaign: urlParams.get('utm_campaign') || 'hiring_q4_2026',
+        utmContent: urlParams.get('utm_content') || '',
+        utmTerm: urlParams.get('utm_term') || '',
+        fbclid: urlParams.get('fbclid') || '',
+        gclid: urlParams.get('gclid') || '',
+        targetCampus: loc || 'all',
+        landingUrl: window.location.href,
+        referrer: document.referrer || ''
+      };
+
+      // Fire real-time visitor telemetry ping for ad click tracking
+      try {
+        fetch('/api/visitor-ping', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            url: window.location.href,
+            referrer: document.referrer || '',
+            utmSource: window.adAttribution.utmSource,
+            utmMedium: window.adAttribution.utmMedium,
+            utmCampaign: window.adAttribution.utmCampaign,
+            utmContent: window.adAttribution.utmContent,
+            utmTerm: window.adAttribution.utmTerm,
+            fbclid: window.adAttribution.fbclid,
+            gclid: window.adAttribution.gclid,
+            campus: loc || 'all',
+            page: 'hiring-portal'
+          })
+        }).catch(() => {});
+      } catch (e) {}
     });
 
     function selectCampus(key, cardEl) {
@@ -1646,6 +1681,8 @@
       
       const trainingChecked = Array.from(document.querySelectorAll('input[name="trainingCerts"]:checked')).map(el => el.value);
 
+      const attr = window.adAttribution || {};
+
       const payload = {
         firstName: document.getElementById('firstName').value.trim(),
         lastName: document.getElementById('lastName').value.trim(),
@@ -1668,6 +1705,14 @@
         interviewFormat: document.getElementById('interviewFormat').value,
         interviewDate: document.getElementById('interviewDate').value,
         interviewTimeSlot: document.getElementById('selectedTimeSlot').value,
+        utmSource: attr.utmSource || '',
+        utmMedium: attr.utmMedium || '',
+        utmCampaign: attr.utmCampaign || '',
+        utmContent: attr.utmContent || '',
+        utmTerm: attr.utmTerm || '',
+        fbclid: attr.fbclid || '',
+        gclid: attr.gclid || '',
+        referrer: attr.referrer || document.referrer || '',
         submittedAt: new Date().toISOString()
       };
 
