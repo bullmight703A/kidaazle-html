@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KIDazzle Child Care | Quick Application & HR Interview</title>
-  <meta name="description" content="KIDazzle Child Care educator quick application and corporate HR interview survey. Apply in 2-3 minutes. English and Spanish.">
+  <title>KIDazzle Early Learning Academy | Educator Careers & Interview Portal</title>
+  <meta name="description" content="Join the KIDazzle family! Now hiring passionate lead teachers, assistant educators, and childcare staff across 7 premier Southeast campuses. Apply in 3 minutes and book your interview.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
       --primary: #1e3a8a;
-      --primary-dark: #172554;
+      --primary-dark: #0f172a;
       --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
       --accent: #f59e0b;
       --accent-hover: #d97706;
-      --accent-light: #fffbeb;
+      --accent-light: #fef3c7;
       --success: #10b981;
       --success-light: #ecfdf5;
       --text: #0f172a;
       --text-muted: #64748b;
       --border: #e2e8f0;
       --surface: #ffffff;
-      --radius-lg: 20px;
-      --radius-md: 12px;
-      --shadow-card: 0 20px 40px -15px rgba(30, 58, 138, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+      --surface-card: #f8fafc;
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 12px 30px -10px rgba(30, 58, 138, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
     }
 
     * {
@@ -38,8 +43,8 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #f8fafc;
       background-image: 
-        radial-gradient(at 15% 15%, rgba(30, 58, 138, 0.05) 0px, transparent 55%),
-        radial-gradient(at 85% 85%, rgba(245, 158, 11, 0.06) 0px, transparent 55%);
+        radial-gradient(at 10% 10%, rgba(30, 58, 138, 0.06) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(245, 158, 11, 0.06) 0px, transparent 50%);
       color: var(--text);
       min-height: 100vh;
       display: flex;
@@ -52,15 +57,15 @@
     .app-header {
       background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
       color: #ffffff;
-      padding: 16px 24px;
+      padding: 14px 24px;
       box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
     }
 
     .header-inner {
-      max-width: 960px;
+      max-width: 1080px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -83,19 +88,19 @@
       padding: 5px 10px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      object-contain: contain;
+      object-fit: contain;
     }
 
     .brand-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: -0.2px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
       display: block;
     }
 
     .brand-subtitle {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: #93c5fd;
       font-weight: 500;
       display: block;
@@ -104,7 +109,56 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+    }
+
+    .lang-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.22);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #6ee7b7;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulseAnim 1.8s infinite;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
     }
 
     .contact-badge {
@@ -117,189 +171,697 @@
       text-decoration: none;
       font-size: 0.82rem;
       font-weight: 600;
-      padding: 6px 12px;
+      padding: 7px 12px;
       border-radius: 999px;
       transition: all 0.2s ease;
     }
 
     .contact-badge:hover {
-      background: rgba(255, 255, 255, 0.22);
-    }
-
-    .badge-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(16, 185, 129, 0.2);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      color: #6ee7b7;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 5px 10px;
-      border-radius: 999px;
-    }
-
-    .pulse-dot {
-      width: 7px;
-      height: 7px;
-      background: #10b981;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #10b981;
+      background: rgba(255, 255, 255, 0.25);
     }
 
     /* Main Container */
     .main-content {
       flex: 1;
-      max-width: 960px;
+      max-width: 1080px;
       width: 100%;
-      margin: 24px auto 48px auto;
-      padding: 0 16px;
+      margin: 28px auto 60px auto;
+      padding: 0 20px;
     }
 
-    /* Intro Card */
-    .intro-card {
+    /* Hero Card */
+    .hero-card {
       background: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 28px 32px;
+      border-radius: var(--radius-xl);
+      padding: 36px 40px;
       border: 1px solid var(--border);
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-      margin-bottom: 20px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 24px;
       position: relative;
       overflow: hidden;
     }
 
-    .intro-card::before {
+    .hero-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 50%, #f59e0b 100%);
+      height: 6px;
+      background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 40%, #f59e0b 100%);
     }
 
-    .intro-header {
+    .hero-eyebrow {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 12px;
+      flex-wrap: wrap;
     }
 
     .tag-pill {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #b45309;
+      color: #92400e;
       background: #fef3c7;
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 5px 12px;
+      border-radius: 8px;
     }
 
-    .intro-card h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: #0f172a;
-      line-height: 1.25;
-      margin-bottom: 8px;
-    }
-
-    .intro-card p {
-      font-size: 0.95rem;
-      color: #475569;
-      line-height: 1.6;
-    }
-
-    .perks-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid #f1f5f9;
-    }
-
-    .perk-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #334155;
-    }
-
-    .perk-item i {
+    .tag-campus {
+      font-size: 0.75rem;
+      font-weight: 700;
       color: #1e3a8a;
       background: #eff6ff;
-      padding: 6px;
-      border-radius: 50%;
-      font-size: 0.8rem;
+      border: 1px solid #bfdbfe;
+      padding: 5px 12px;
+      border-radius: 8px;
     }
 
-    /* Survey Card Wrapper */
-    .survey-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-card);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+    .hero-card h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
     }
 
-    .survey-card-top {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 14px 24px;
+    .hero-card p {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.6;
+      max-width: 820px;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .benefit-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      gap: 12px;
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid #edf2f7;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #1e293b;
     }
 
-    .survey-card-title {
-      font-family: 'Outfit', sans-serif;
+    .benefit-item i {
+      color: #1e3a8a;
+      background: #dbeafe;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
       font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    /* Nav Tabs */
+    .view-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      background: #e2e8f0;
+      padding: 6px;
+      border-radius: 14px;
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .view-tab-btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
       font-weight: 700;
+      border: none;
+      background: transparent;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .view-tab-btn.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Form Container */
+    .application-box {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .form-progress-bar {
+      display: flex;
+      background: #0f172a;
+      padding: 16px 28px;
+      justify-content: space-between;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .step-node {
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #f8fafc;
+      color: #64748b;
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
     }
 
-    .survey-card-title i {
+    .step-node.active {
       color: #f59e0b;
     }
 
-    .survey-card-meta {
+    .step-node.completed {
+      color: #10b981;
+    }
+
+    .step-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #1e293b;
+      border: 2px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #ffffff;
+    }
+
+    .step-node.active .step-circle {
+      background: #f59e0b;
+      border-color: #f59e0b;
+      color: #0f172a;
+      font-weight: 900;
+    }
+
+    .step-node.completed .step-circle {
+      background: #10b981;
+      border-color: #10b981;
+    }
+
+    .form-pane {
+      padding: 36px 40px;
+    }
+
+    .step-content {
+      display: none;
+    }
+
+    .step-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-header {
+      margin-bottom: 24px;
+    }
+
+    .step-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .step-header p {
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+
+    /* Grid Layouts */
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form-label .req {
+      color: #ef4444;
+      margin-left: 2px;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+    }
+
+    .form-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    /* Campus Cards Selector */
+    .campus-selector-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .campus-radio-card {
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .campus-radio-card:hover {
+      border-color: #93c5fd;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .campus-radio-card.selected {
+      border-color: #1e3a8a;
+      background: #eff6ff;
+      box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+    }
+
+    .campus-radio-card input {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      accent-color: #1e3a8a;
+      width: 18px;
+      height: 18px;
+    }
+
+    .campus-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      padding-right: 28px;
+    }
+
+    .campus-address {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .campus-director {
       font-size: 0.78rem;
-      color: #94a3b8;
+      color: #1e3a8a;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dbeafe;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* Option Pills / Chips */
+    .pills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .pill-checkbox-label {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      background: #f8fafc;
+      transition: all 0.2s ease;
+    }
+
+    .pill-checkbox-label:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .pill-checkbox-label.checked {
+      background: #eff6ff;
+      border-color: #1e3a8a;
+      color: #1e3a8a;
+    }
+
+    .pill-checkbox-label input {
+      accent-color: #1e3a8a;
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Calendar Booking Slots */
+    .time-slots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .time-slot-btn {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: #ffffff;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .time-slot-btn:hover {
+      border-color: #93c5fd;
+      background: #f8fafc;
+    }
+
+    .time-slot-btn.selected {
+      background: #1e3a8a;
+      color: #ffffff;
+      border-color: #1e3a8a;
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    }
+
+    /* Buttons */
+    .btn-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-prev {
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 700;
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-prev:hover {
+      background: #e2e8f0;
+      color: #1e293b;
+    }
+
+    .btn-next, .btn-submit {
+      padding: 12px 28px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 800;
+      background: #1e3a8a;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(30, 58, 138, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-next:hover, .btn-submit:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+    }
+
+    .btn-submit {
+      background: #10b981;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-submit:hover {
+      background: #059669;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+    }
+
+    /* Success Screen */
+    .success-card {
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .success-icon-wrap {
+      width: 76px;
+      height: 76px;
+      background: #ecfdf5;
+      border: 2px solid #a7f3d0;
+      color: #10b981;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+    }
+
+    .success-card h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .success-card p {
+      font-size: 1.05rem;
+      color: #475569;
+      max-width: 640px;
+      margin: 0 auto 24px auto;
+    }
+
+    .appointment-summary-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      max-width: 620px;
+      margin: 0 auto 28px auto;
+      text-align: left;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #edf2f7;
+      font-size: 0.92rem;
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+    }
+
+    .summary-label {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .summary-value {
+      color: #0f172a;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .calendar-dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(30, 58, 138, 0.35);
+      transition: all 0.2s ease;
+      margin-bottom: 24px;
+      border: none;
+    }
+
+    .calendar-dl-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* Checklist */
+    .checklist-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .checklist-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+
+    .checklist-item i {
+      color: #10b981;
+      margin-top: 3px;
+      font-size: 0.95rem;
+    }
+
+    /* Survey Tab Frame */
+    .survey-tab-content {
+      display: none;
+    }
+
+    .survey-tab-content.active {
+      display: block;
+    }
+
+    .survey-card {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .survey-top {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .survey-top-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .survey-iframe-container {
       width: 100%;
-      background: #ffffff;
       min-height: 850px;
-      position: relative;
     }
 
     .survey-iframe-container iframe {
       width: 100%;
       min-height: 850px;
       border: none;
-      display: block;
     }
 
     /* Footer */
     .app-footer {
       background: #ffffff;
       border-top: 1px solid var(--border);
-      padding: 24px 16px;
+      padding: 28px 20px;
       text-align: center;
       font-size: 0.85rem;
       color: var(--text-muted);
@@ -307,12 +869,12 @@
     }
 
     .footer-inner {
-      max-width: 960px;
+      max-width: 1080px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .footer-links {
@@ -332,18 +894,24 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
+      .form-grid-2, .form-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .form-pane {
+        padding: 24px 20px;
+      }
+      .hero-card {
+        padding: 24px 20px;
+      }
+      .hero-card h1 {
+        font-size: 1.6rem;
+      }
       .brand-subtitle {
         display: none;
       }
-      .intro-card {
-        padding: 20px 18px;
-      }
-      .intro-card h1 {
-        font-size: 1.35rem;
-      }
-      .perks-row {
-        gap: 10px;
+      .form-progress-bar {
+        padding: 12px 16px;
       }
     }
   </style>
@@ -356,14 +924,18 @@
       <a href="https://kidazzle.com" class="brand-link" target="_blank" rel="noopener">
         <img src="https://storage.googleapis.com/msgsndr/ZR2UvxPL2wlZNSvHjmJD/media/64ef561bad8c716760dfd435.png" alt="KIDazzle Logo" class="brand-logo">
         <div>
-          <span class="brand-title">KIDazzle Child Care</span>
-          <span class="brand-subtitle">The Village That Grows With You</span>
+          <span class="brand-title">KIDazzle Early Learning Academy</span>
+          <span class="brand-subtitle" data-i18n="tagline">The Village That Grows With You</span>
         </div>
       </a>
       <div class="header-actions">
+        <button id="langToggle" class="lang-toggle-btn" onclick="toggleLanguage()">
+          <i class="fa-solid fa-language"></i>
+          <span id="langLabel">Español</span>
+        </button>
         <div class="badge-status">
           <span class="pulse-dot"></span>
-          Now Hiring
+          <span data-i18n="nowHiring">Now Hiring</span>
         </div>
         <a href="tel:8774101002" class="contact-badge">
           <i class="fa-solid fa-phone"></i>
@@ -375,79 +947,943 @@
 
   <!-- Main Content Area -->
   <main class="main-content">
-    
-    <!-- Clean Intro Header -->
-    <section class="intro-card">
-      <div class="intro-header">
-        <span class="tag-pill">Quick Application</span>
-        <span style="font-size: 0.8rem; color: #64748b; font-weight: 500;">
-          <i class="fa-solid fa-globe" style="color: #3b82f6; margin-right: 4px;"></i> English &amp; Español
-        </span>
+
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-eyebrow">
+        <span class="tag-pill" data-i18n="heroBadge">Official Hiring &amp; Careers</span>
+        <span class="tag-campus">7 Campuses: GA, TN &amp; FL</span>
       </div>
-      <h1>Educator Application &amp; HR Interview</h1>
-      <p>
-        Welcome! We are excited to learn more about you. Please complete this quick 2–3 minute survey below to submit your qualifications and schedule your interview with our hiring team.
+      <h1 data-i18n="heroTitle">Inspire, Educate &amp; Grow With KIDazzle</h1>
+      <p data-i18n="heroDesc">
+        Join Georgia, Tennessee &amp; Florida's premier early education community. We are currently interviewing lead teachers, assistant educators, infant caregivers, and nutrition staff. Complete this quick 3-minute application to schedule your direct interview with our campus directors.
       </p>
 
-      <div class="perks-row">
-        <div class="perk-item">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span>CDA / TCC Sponsorship</span>
-        </div>
-        <div class="perk-item">
+      <!-- Key Benefits / Why Work With KIDazzle -->
+      <div class="benefits-grid">
+        <div class="benefit-item">
           <i class="fa-solid fa-hand-holding-dollar"></i>
-          <span>Competitive Hourly Wages</span>
+          <div>
+            <div data-i18n="b1Title">$16.00 – $24.00+ / Hour</div>
+            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b1Sub">Based on CDA, Degree &amp; Experience</span>
+          </div>
         </div>
-        <div class="perk-item">
-          <i class="fa-solid fa-star"></i>
-          <span>Star 6 Quality Rated</span>
+        <div class="benefit-item">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <div data-i18n="b2Title">100% Paid CDA &amp; TCC</div>
+            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b2Sub">Full credential sponsorship</span>
+          </div>
         </div>
-        <div class="perk-item">
-          <i class="fa-solid fa-bolt"></i>
-          <span>Fast 24–48hr Response</span>
+        <div class="benefit-item">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <div>
+            <div data-i18n="b3Title">Section 125 Healthcare</div>
+            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b3Sub">Pre-tax medical, dental &amp; vision</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <div data-i18n="b4Title">Quality Rated Star 3</div>
+            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b4Sub">NAEYC aligned curriculum</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Embedded LeadConnector Survey Form -->
-    <section class="survey-card">
-      <div class="survey-card-top">
-        <div class="survey-card-title">
-          <i class="fa-solid fa-clipboard-check"></i>
-          <span>KIDazzle HR Corporate Interview Survey</span>
+    <!-- View Mode Switcher -->
+    <div class="view-tabs">
+      <button class="view-tab-btn active" id="tabQuickApp" onclick="switchView('app')">
+        <i class="fa-solid fa-bolt"></i>
+        <span data-i18n="tabFast">Interactive Application &amp; Calendar</span>
+      </button>
+      <button class="view-tab-btn" id="tabGhlSurvey" onclick="switchView('survey')">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <span data-i18n="tabCorporate">Corporate HR Survey</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: Fast Interactive Application & Calendar Booking -->
+    <div id="interactiveAppBox" class="application-box">
+      <!-- Progress Bar -->
+      <div class="form-progress-bar">
+        <div class="step-node active" id="stepNode1" onclick="jumpToStep(1)">
+          <div class="step-circle">1</div>
+          <span data-i18n="st1">Contact</span>
         </div>
-        <div class="survey-card-meta">
-          <i class="fa-solid fa-lock" style="color: #10b981; margin-right: 4px;"></i> Secure &amp; Confidential
+        <div class="step-node" id="stepNode2" onclick="jumpToStep(2)">
+          <div class="step-circle">2</div>
+          <span data-i18n="st2">Campus &amp; Role</span>
+        </div>
+        <div class="step-node" id="stepNode3" onclick="jumpToStep(3)">
+          <div class="step-circle">3</div>
+          <span data-i18n="st3">Qualifications</span>
+        </div>
+        <div class="step-node" id="stepNode4" onclick="jumpToStep(4)">
+          <div class="step-circle">4</div>
+          <span data-i18n="st4">Interview Date &amp; Time</span>
+        </div>
+        <div class="step-node" id="stepNode5">
+          <div class="step-circle">✓</div>
+          <span data-i18n="st5">Confirmed</span>
         </div>
       </div>
 
-      <div class="survey-iframe-container">
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/survey/BOYM2PBNfJB2l53T8Wq9?notrack=true"
-          style="border:none;width:100%;min-height:850px;"
-          scrolling="no"
-          id="BOYM2PBNfJB2l53T8Wq9"
-          title="KIDazzle Educator Application & HR Interview">
-        </iframe>
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      <div class="form-pane">
+        <form id="hiringForm" onsubmit="handleFormSubmit(event)">
+          
+          <!-- STEP 1: Basic Information -->
+          <div class="step-content active" id="stepContent1">
+            <div class="step-header">
+              <h2 data-i18n="s1Title">Step 1: Your Contact Information</h2>
+              <p data-i18n="s1Desc">Please share your contact details so our campus director can reach you.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblFirstName">First Name</span> <span class="req">*</span></label>
+                <input type="text" id="firstName" class="form-input" placeholder="e.g. Maria" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblLastName">Last Name</span> <span class="req">*</span></label>
+                <input type="text" id="lastName" class="form-input" placeholder="e.g. Jenkins" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblPhone">Mobile Phone</span> <span class="req">*</span></label>
+                <input type="tel" id="phone" class="form-input" placeholder="e.g. (404) 555-0199" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblEmail">Email Address</span> <span class="req">*</span></label>
+                <input type="email" id="email" class="form-input" placeholder="e.g. maria.jenkins@gmail.com" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" data-i18n="lblBilingual">Are you bilingual? / ¿Eres bilingüe?</label>
+                <select id="bilingualStatus" class="form-select">
+                  <option value="English Only">English Only</option>
+                  <option value="Bilingual English and Spanish">Bilingual (English &amp; Español)</option>
+                  <option value="Spanish Primary">Spanish Primary (Español)</option>
+                  <option value="Other">Other Language(s)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="lblContactPref">Preferred Contact Method</label>
+                <select id="contactPref" class="form-select">
+                  <option value="Text Message (SMS)">Text Message (SMS)</option>
+                  <option value="Phone Call">Phone Call</option>
+                  <option value="Email">Email</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="btn-row" style="justify-content: flex-end;">
+              <button type="button" class="btn-next" onclick="nextStep(2)">
+                <span data-i18n="btnNext">Continue to Campus &amp; Role</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Location & Position -->
+          <div class="step-content" id="stepContent2">
+            <div class="step-header">
+              <h2 data-i18n="s2Title">Step 2: Choose Your Campus &amp; Role</h2>
+              <p data-i18n="s2Desc">Select the KIDazzle location where you would like to work. Your interview will be scheduled directly with that campus director.</p>
+            </div>
+
+            <label class="form-label" style="margin-bottom: 12px;"><span data-i18n="lblSelectCampus">Select Preferred Campus</span> <span class="req">*</span></label>
+            <div class="campus-selector-grid" id="campusList">
+              <!-- Memphis -->
+              <div class="campus-radio-card selected" onclick="selectCampus('memphis', this)">
+                <input type="radio" name="campusRadio" value="memphis" checked>
+                <div class="campus-name">Memphis Flying Start (FAA Center)</div>
+                <div class="campus-address">3229 Democrat Rd, Memphis, TN 38118</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> memphis@kidazzle.com</div>
+              </div>
+
+              <!-- College Park -->
+              <div class="campus-radio-card" onclick="selectCampus('collegepark', this)">
+                <input type="radio" name="campusRadio" value="collegepark">
+                <div class="campus-name">Little Flyers College Park</div>
+                <div class="campus-address">1901 Phoenix Blvd, College Park, GA 30349</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> collegepark@kidazzle.com</div>
+              </div>
+
+              <!-- West End -->
+              <div class="campus-radio-card" onclick="selectCampus('westend', this)">
+                <input type="radio" name="campusRadio" value="westend">
+                <div class="campus-name">Historic West End Atlanta</div>
+                <div class="campus-address">840 Ralph David Abernathy Blvd SW, Atlanta, GA 30310</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> westend@kidazzle.com</div>
+              </div>
+
+              <!-- Peachtree Summit -->
+              <div class="campus-radio-card" onclick="selectCampus('summit', this)">
+                <input type="radio" name="campusRadio" value="summit">
+                <div class="campus-name">Peachtree Summit Midtown</div>
+                <div class="campus-address">401 W Peachtree St NW #105, Atlanta, GA 30308</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> summit@kidazzle.com</div>
+              </div>
+
+              <!-- AFC Downtown -->
+              <div class="campus-radio-card" onclick="selectCampus('afc', this)">
+                <input type="radio" name="campusRadio" value="afc">
+                <div class="campus-name">Atlanta Federal Center (AFC)</div>
+                <div class="campus-address">61 Forsyth St SW, Atlanta, GA 30303</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> afc@kidazzle.com</div>
+              </div>
+
+              <!-- Hampton -->
+              <div class="campus-radio-card" onclick="selectCampus('hampton', this)">
+                <input type="radio" name="campusRadio" value="hampton">
+                <div class="campus-name">Hampton FAA Center</div>
+                <div class="campus-address">1000 Burks Rd, Hampton, GA 30228</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> hampton@kidazzle.com</div>
+              </div>
+
+              <!-- Miami / Doral -->
+              <div class="campus-radio-card" onclick="selectCampus('miami', this)">
+                <input type="radio" name="campusRadio" value="miami">
+                <div class="campus-name">Tailwinds Miami / Doral</div>
+                <div class="campus-address">8400 NW 36th St #120, Doral, FL 33166</div>
+                <div class="campus-director"><i class="fa-solid fa-envelope"></i> miami@kidazzle.com</div>
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblPosition">Target Position</span> <span class="req">*</span></label>
+                <select id="positionDesired" class="form-select" required>
+                  <option value="Lead Teacher (Infant/Toddler)">Lead Teacher (Infant / Toddler)</option>
+                  <option value="Lead Teacher (Preschool/Pre-K)">Lead Teacher (Preschool 3s / Pre-K)</option>
+                  <option value="Georgia Pre-K Lead Teacher (B.S. ECE)">Georgia Pre-K Lead Teacher</option>
+                  <option value="Assistant Teacher">Assistant Teacher</option>
+                  <option value="Float Teacher / Support Specialist">Float Teacher / Support Specialist</option>
+                  <option value="Nutrition Specialist / Food Service Cook">Nutrition Specialist / Cook</option>
+                  <option value="Center Director / Assistant Director">Center Director / Admin</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblPay">Desired Hourly Pay</span> <span class="req">*</span></label>
+                <select id="desiredPay" class="form-select" required>
+                  <option value="$16.00 - $17.50 / hr">$16.00 – $17.50 / hr (Entry / CDA in progress)</option>
+                  <option value="$18.00 - $20.00 / hr" selected>$18.00 – $20.00 / hr (CDA / TCC Certified)</option>
+                  <option value="$20.00 - $22.50 / hr">$20.00 – $22.50 / hr (Associate Degree ECE)</option>
+                  <option value="$23.00 - $26.00+ / hr">$23.00 – $26.00+ / hr (Bachelor's / Certified Teacher)</option>
+                  <option value="Negotiable based on experience">Negotiable based on experience</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblStartDate">Available Start Date</span> <span class="req">*</span></label>
+                <input type="date" id="startDate" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="btn-row">
+              <button type="button" class="btn-prev" onclick="prevStep(1)">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="btnBack">Back</span>
+              </button>
+              <button type="button" class="btn-next" onclick="nextStep(3)">
+                <span data-i18n="btnNextStep3">Continue to Qualifications</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Experience & Screening Questions -->
+          <div class="step-content" id="stepContent3">
+            <div class="step-header">
+              <h2 data-i18n="s3Title">Step 3: Childcare Credentials &amp; Background</h2>
+              <p data-i18n="s3Desc">Please answer these screening questions so our director can tailor your interview.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblHighestEdu">Highest Level of Education / Credential</span> <span class="req">*</span></label>
+                <select id="credentials" class="form-select" required>
+                  <option value="Child Development Associate (CDA)">Child Development Associate (CDA)</option>
+                  <option value="Technical Certificate of Credit (TCC in ECE)">Technical Certificate of Credit (TCC)</option>
+                  <option value="Associate Degree in Early Childhood">Associate Degree in Early Childhood</option>
+                  <option value="Bachelor's Degree in ECE or Elementary Education">Bachelor's Degree in ECE / Elementary</option>
+                  <option value="Master's Degree in Education">Master's Degree in Education</option>
+                  <option value="High School Diploma / GED (Desire CDA Sponsorship)">High School Diploma / GED (Desire CDA Sponsorship)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblExpYears">Years in Licensed Child Care</span> <span class="req">*</span></label>
+                <select id="experienceYears" class="form-select" required>
+                  <option value="Less than 1 year / New to Early Education">Less than 1 year / Passionate beginner</option>
+                  <option value="1 - 2 years in licensed center">1 – 2 years in licensed center</option>
+                  <option value="3 - 5 years in licensed center" selected>3 – 5 years in licensed center</option>
+                  <option value="5+ years experienced educator">5+ years experienced educator</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="lblStateTraining">State-Approved Training Completed (Select all that apply)</label>
+              <div class="pills-grid">
+                <label class="pill-checkbox-label">
+                  <input type="checkbox" name="trainingCerts" value="ECE 40-Hour Health & Safety" checked>
+                  <span>ECE 40-Hr Health &amp; Safety</span>
+                </label>
+                <label class="pill-checkbox-label">
+                  <input type="checkbox" name="trainingCerts" value="Mandated Reporter Training" checked>
+                  <span>Mandated Reporter</span>
+                </label>
+                <label class="pill-checkbox-label">
+                  <input type="checkbox" name="trainingCerts" value="Pediatric CPR & First Aid" checked>
+                  <span>Pediatric CPR &amp; First Aid</span>
+                </label>
+                <label class="pill-checkbox-label">
+                  <input type="checkbox" name="trainingCerts" value="GaPDS / State Registry Verified" checked>
+                  <span>GaPDS / State Registry Active</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="lblExperienceDetail">Describe your childcare experience in the past (Age groups, curriculum, activities):</label>
+              <textarea id="pastExperience" class="form-textarea" placeholder="e.g. Worked 3 years with 2-year-olds and toddlers implementing GELDS curriculum, sensory play, and positive guidance..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="lblCandidateQuestions">Do you have any specific questions for the Director during your interview?</label>
+              <textarea id="candidateQuestions" class="form-textarea" placeholder="e.g. I would love to learn more about the CDA sponsorship program and classroom ratios..."></textarea>
+            </div>
+
+            <div class="btn-row">
+              <button type="button" class="btn-prev" onclick="prevStep(2)">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="btnBack">Back</span>
+              </button>
+              <button type="button" class="btn-next" onclick="nextStep(4)">
+                <span data-i18n="btnNextStep4">Continue to Interview Calendar</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Calendar Date & Time Slot Selection -->
+          <div class="step-content" id="stepContent4">
+            <div class="step-header">
+              <h2 data-i18n="s4Title">Step 4: Book Your Interview Appointment</h2>
+              <p data-i18n="s4Desc">Select your preferred date, interview format, and time slot. Our site director will be notified and confirm your spot immediately.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblInterviewFormat">Interview Format</span> <span class="req">*</span></label>
+                <select id="interviewFormat" class="form-select" required>
+                  <option value="In-Person Campus Walkthrough & Interview" selected>In-Person Campus Walkthrough &amp; Interview</option>
+                  <option value="Virtual Video Interview (Zoom / Google Meet)">Virtual Video Interview (Zoom / Google Meet)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="lblInterviewDate">Preferred Interview Date</span> <span class="req">*</span></label>
+                <input type="date" id="interviewDate" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label"><span data-i18n="lblInterviewTime">Choose Your Best Time Slot</span> <span class="req">*</span></label>
+              <div class="time-slots-grid" id="timeSlotsContainer">
+                <div class="time-slot-btn" onclick="selectTimeSlot('09:30 AM', this)">9:30 AM</div>
+                <div class="time-slot-btn selected" onclick="selectTimeSlot('10:30 AM', this)">10:30 AM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('11:30 AM', this)">11:30 AM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('01:30 PM', this)">1:30 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('02:30 PM', this)">2:30 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('03:30 PM', this)">3:30 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('04:30 PM', this)">4:30 PM</div>
+              </div>
+              <input type="hidden" id="selectedTimeSlot" value="10:30 AM">
+            </div>
+
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 14px 18px; margin-top: 14px; font-size: 0.88rem; color: #1e3a8a;">
+              <i class="fa-solid fa-circle-info" style="margin-right: 6px;"></i>
+              <span data-i18n="appointmentNotice">Submitting this form immediately books your appointment on the Director's calendar, dispatches your email confirmation, and creates your candidate profile in our HR pipeline.</span>
+            </div>
+
+            <div class="btn-row">
+              <button type="button" class="btn-prev" onclick="prevStep(3)">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="btnBack">Back</span>
+              </button>
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span data-i18n="btnConfirmSubmit">Confirm Interview &amp; Submit</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 5: Success & Confirmation -->
+          <div class="step-content" id="stepContent5">
+            <div class="success-card">
+              <div class="success-icon-wrap">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h2 data-i18n="successTitle">Interview Successfully Booked!</h2>
+              <p data-i18n="successDesc">
+                Thank you! Your educator interview appointment has been registered with our campus director and our corporate HR leadership team.
+              </p>
+
+              <!-- Dynamic Appointment Summary -->
+              <div class="appointment-summary-box">
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumApplicant">Candidate Name:</span>
+                  <span class="summary-value" id="sumName">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumCampus">Campus Location:</span>
+                  <span class="summary-value" id="sumCampus">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumDirector">Assigned Director:</span>
+                  <span class="summary-value" id="sumDirectorEmail">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumDate">Interview Date:</span>
+                  <span class="summary-value" id="sumDate">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumTime">Interview Time:</span>
+                  <span class="summary-value" id="sumTime">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumFormat">Interview Format:</span>
+                  <span class="summary-value" id="sumFormat">—</span>
+                </div>
+              </div>
+
+              <!-- 1-Click Add to Calendar Download -->
+              <button type="button" class="calendar-dl-btn" onclick="downloadIcsFile()">
+                <i class="fa-solid fa-calendar-plus"></i>
+                <span data-i18n="btnAddCal">Add to Google / Apple / Outlook Calendar (.ics)</span>
+              </button>
+
+              <!-- Checklist: What to Bring -->
+              <div class="checklist-box">
+                <h3 data-i18n="chkTitle"><i class="fa-solid fa-clipboard-list" style="color: #1e3a8a;"></i> What to Bring to Your Interview</h3>
+                <div class="checklist-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="chk1">Valid Government-Issued Photo ID (Driver's License or State ID)</span>
+                </div>
+                <div class="checklist-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="chk2">Copy of Highest Diploma, Degree, or CDA / TCC Credential</span>
+                </div>
+                <div class="checklist-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="chk3">Bright from the Start / GaPDS / State Registry Transcript (if available)</span>
+                </div>
+                <div class="checklist-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="chk4">Pediatric CPR &amp; First Aid or Mandated Reporter Certificates</span>
+                </div>
+                <div class="checklist-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="chk5">2 Professional References (past supervisors or directors)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </form>
       </div>
-    </section>
+    </div>
+
+    <!-- TAB 2: Embedded Corporate GHL Survey Frame -->
+    <div id="corporateSurveyBox" class="survey-tab-content">
+      <div class="survey-card">
+        <div class="survey-top">
+          <div class="survey-top-title">
+            <i class="fa-solid fa-clipboard-check" style="color: #f59e0b;"></i>
+            <span>KIDazzle Corporate HR Interview Survey</span>
+          </div>
+          <div style="font-size: 0.8rem; color: #94a3b8;">
+            <i class="fa-solid fa-shield-halved" style="color: #10b981; margin-right: 4px;"></i> Secure GHL Endpoint
+          </div>
+        </div>
+        <div class="survey-iframe-container">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/survey/BOYM2PBNfJB2l53T8Wq9?notrack=true"
+            id="BOYM2PBNfJB2l53T8Wq9"
+            title="KIDazzle Educator Application & HR Interview">
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+      </div>
+    </div>
 
   </main>
 
-  <!-- Simple Footer -->
+  <!-- Branded Footer -->
   <footer class="app-footer">
     <div class="footer-inner">
-      <p>&copy; 2026 KIDazzle Child Care, Inc. All rights reserved.</p>
+      <p>&copy; 2026 KIDazzle Child Care &amp; Early Learning Academy, Inc. All rights reserved.</p>
       <div class="footer-links">
         <a href="https://kidazzle.com" target="_blank" rel="noopener">KIDazzle.com</a>
         <span>&bull;</span>
         <a href="tel:8774101002">Questions? Call 877-410-1002</a>
         <span>&bull;</span>
         <a href="mailto:careers@kidazzle.com">careers@kidazzle.com</a>
+        <span>&bull;</span>
+        <a href="https://kidazzle.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
       </div>
     </div>
   </footer>
 
+  <script>
+    // State Directory & Campus Mappings
+    const CAMPUSES = {
+      memphis: {
+        name: 'Memphis Flying Start (FAA Center)',
+        address: '3229 Democrat Rd, Memphis, TN 38118',
+        directorEmail: 'memphis@kidazzle.com',
+        phone: '(901) 368-6901'
+      },
+      collegepark: {
+        name: 'Little Flyers College Park',
+        address: '1901 Phoenix Blvd, College Park, GA 30349',
+        directorEmail: 'collegepark@kidazzle.com',
+        phone: '(770) 994-3553'
+      },
+      westend: {
+        name: 'Historic West End Atlanta',
+        address: '840 Ralph David Abernathy Blvd SW, Atlanta, GA 30310',
+        directorEmail: 'westend@kidazzle.com',
+        phone: '(404) 755-1044'
+      },
+      summit: {
+        name: 'Peachtree Summit Midtown Atlanta',
+        address: '401 W Peachtree St NW #105, Atlanta, GA 30308',
+        directorEmail: 'summit@kidazzle.com',
+        phone: '(404) 522-8110'
+      },
+      afc: {
+        name: 'Atlanta Federal Center (AFC Downtown)',
+        address: '61 Forsyth St SW, Atlanta, GA 30303',
+        directorEmail: 'afc@kidazzle.com',
+        phone: '(404) 681-0665'
+      },
+      hampton: {
+        name: 'Hampton FAA Center',
+        address: '1000 Burks Rd, Hampton, GA 30228',
+        directorEmail: 'hampton@kidazzle.com',
+        phone: '(770) 210-7290'
+      },
+      miami: {
+        name: 'Tailwinds Miami / Doral',
+        address: '8400 NW 36th St #120, Doral, FL 33166',
+        directorEmail: 'miami@kidazzle.com',
+        phone: '(305) 592-3860'
+      }
+    };
+
+    let currentCampusKey = 'memphis';
+    let currentStep = 1;
+    let submittedPayload = null;
+    let currentLang = 'en';
+
+    // Bilingual Dictionary
+    const I18N = {
+      en: {
+        tagline: "The Village That Grows With You",
+        nowHiring: "Now Hiring",
+        heroBadge: "Official Hiring & Careers",
+        heroTitle: "Inspire, Educate & Grow With KIDazzle",
+        heroDesc: "Join Georgia, Tennessee & Florida's premier early education community. We are currently interviewing lead teachers, assistant educators, infant caregivers, and nutrition staff. Complete this quick 3-minute application to schedule your direct interview with our campus directors.",
+        b1Title: "$16.00 – $24.00+ / Hour",
+        b1Sub: "Based on CDA, Degree & Experience",
+        b2Title: "100% Paid CDA & TCC",
+        b2Sub: "Full credential sponsorship",
+        b3Title: "Section 125 Healthcare",
+        b3Sub: "Pre-tax medical, dental & vision",
+        b4Title: "Quality Rated Star 3",
+        b4Sub: "NAEYC aligned curriculum",
+        tabFast: "Interactive Application & Calendar",
+        tabCorporate: "Corporate HR Survey",
+        st1: "Contact",
+        st2: "Campus & Role",
+        st3: "Qualifications",
+        st4: "Interview Date & Time",
+        st5: "Confirmed",
+        s1Title: "Step 1: Your Contact Information",
+        s1Desc: "Please share your contact details so our campus director can reach you.",
+        lblFirstName: "First Name",
+        lblLastName: "Last Name",
+        lblPhone: "Mobile Phone",
+        lblEmail: "Email Address",
+        lblBilingual: "Are you bilingual? / ¿Eres bilingüe?",
+        lblContactPref: "Preferred Contact Method",
+        btnNext: "Continue to Campus & Role",
+        s2Title: "Step 2: Choose Your Campus & Role",
+        s2Desc: "Select the KIDazzle location where you would like to work. Your interview will be scheduled directly with that campus director.",
+        lblSelectCampus: "Select Preferred Campus",
+        lblPosition: "Target Position",
+        lblPay: "Desired Hourly Pay",
+        lblStartDate: "Available Start Date",
+        btnBack: "Back",
+        btnNextStep3: "Continue to Qualifications",
+        s3Title: "Step 3: Childcare Credentials & Background",
+        s3Desc: "Please answer these screening questions so our director can tailor your interview.",
+        lblHighestEdu: "Highest Level of Education / Credential",
+        lblExpYears: "Years in Licensed Child Care",
+        lblStateTraining: "State-Approved Training Completed (Select all that apply)",
+        lblExperienceDetail: "Describe your childcare experience in the past (Age groups, curriculum, activities):",
+        lblCandidateQuestions: "Do you have any specific questions for the Director during your interview?",
+        btnNextStep4: "Continue to Interview Calendar",
+        s4Title: "Step 4: Book Your Interview Appointment",
+        s4Desc: "Select your preferred date, interview format, and time slot. Our site director will be notified and confirm your spot immediately.",
+        lblInterviewFormat: "Interview Format",
+        lblInterviewDate: "Preferred Interview Date",
+        lblInterviewTime: "Choose Your Best Time Slot",
+        appointmentNotice: "Submitting this form immediately books your appointment on the Director's calendar, dispatches your email confirmation, and creates your candidate profile in our HR pipeline.",
+        btnConfirmSubmit: "Confirm Interview & Submit",
+        successTitle: "Interview Successfully Booked!",
+        successDesc: "Thank you! Your educator interview appointment has been registered with our campus director and our corporate HR leadership team.",
+        sumApplicant: "Candidate Name:",
+        sumCampus: "Campus Location:",
+        sumDirector: "Assigned Director:",
+        sumDate: "Interview Date:",
+        sumTime: "Interview Time:",
+        sumFormat: "Interview Format:",
+        btnAddCal: "Add to Google / Apple / Outlook Calendar (.ics)",
+        chkTitle: "What to Bring to Your Interview",
+        chk1: "Valid Government-Issued Photo ID (Driver's License or State ID)",
+        chk2: "Copy of Highest Diploma, Degree, or CDA / TCC Credential",
+        chk3: "Bright from the Start / GaPDS / State Registry Transcript (if available)",
+        chk4: "Pediatric CPR & First Aid or Mandated Reporter Certificates",
+        chk5: "2 Professional References (past supervisors or directors)"
+      },
+      es: {
+        tagline: "La Aldea Que Crece Contigo",
+        nowHiring: "Estamos Contratando",
+        heroBadge: "Portal Oficial de Empleo y Carreras",
+        heroTitle: "Inspira, Educa y Crece Con KIDazzle",
+        heroDesc: "Únete a la mejor comunidad de educación temprana en Georgia, Tennessee y Florida. Estamos entrevistando maestras principales, asistentes, cuidadoras de infantes y personal de cocina. Completa esta solicitud de 3 minutos para programar tu entrevista directa.",
+        b1Title: "$16.00 – $24.00+ / Hora",
+        b1Sub: "Según credencial CDA, título y experiencia",
+        b2Title: "CDA y TCC 100% Pagados",
+        b2Sub: "Patrocinio completo de credenciales",
+        b3Title: "Beneficios de Salud Sección 125",
+        b3Sub: "Médico, dental y visión antes de impuestos",
+        b4Title: "Calidad Calificada 3 Estrellas",
+        b4Sub: "Currículo alineado con estándares NAEYC",
+        tabFast: "Solicitud Rápida y Calendario",
+        tabCorporate: "Encuesta Corporativa de RRHH",
+        st1: "Contacto",
+        st2: "Campus y Puesto",
+        st3: "Calificaciones",
+        st4: "Fecha y Hora",
+        st5: "Confirmado",
+        s1Title: "Paso 1: Su Información de Contacto",
+        s1Desc: "Comparta sus datos para que nuestra directora de campus pueda comunicarse con usted.",
+        lblFirstName: "Nombre",
+        lblLastName: "Apellido",
+        lblPhone: "Teléfono Móvil",
+        lblEmail: "Correo Electrónico",
+        lblBilingual: "¿Eres bilingüe? / Are you bilingual?",
+        lblContactPref: "Método de Contacto Preferido",
+        btnNext: "Continuar a Campus y Puesto",
+        s2Title: "Paso 2: Elija su Campus y Puesto",
+        s2Desc: "Seleccione el campus de KIDazzle donde desea trabajar. Su entrevista se programará directamente con la directora.",
+        lblSelectCampus: "Seleccione el Campus Preferido",
+        lblPosition: "Puesto Solicitado",
+        lblPay: "Pago por Hora Deseado",
+        lblStartDate: "Posible Fecha de Inicio",
+        btnBack: "Atrás",
+        btnNextStep3: "Continuar a Calificaciones",
+        s3Title: "Paso 3: Credenciales y Experiencia",
+        s3Desc: "Por favor responda estas preguntas de evaluación para que podamos personalizar su entrevista.",
+        lblHighestEdu: "Nivel Más Alto de Educación / Credencial",
+        lblExpYears: "Años en Cuidado Infantil Licenciado",
+        lblStateTraining: "Capacitaciones Estatales Aprobadas (Marque todas las que apliquen)",
+        lblExperienceDetail: "¿Qué experiencias ha tenido con el cuidado de niños en el pasado?",
+        lblCandidateQuestions: "¿Tiene alguna pregunta para la entrevista o la directora?",
+        btnNextStep4: "Continuar al Calendario",
+        s4Title: "Paso 4: Reserve su Cita de Entrevista",
+        s4Desc: "Seleccione su fecha, formato de entrevista y horario. La directora del centro confirmará su espacio inmediatamente.",
+        lblInterviewFormat: "Formato de Entrevista",
+        lblInterviewDate: "Fecha de Entrevista Preferida",
+        lblInterviewTime: "Elija su Mejor Horario",
+        appointmentNotice: "Al enviar este formulario, su cita queda reservada en el calendario de la directora, se envía su confirmación por correo y se crea su perfil en nuestro sistema de RRHH.",
+        btnConfirmSubmit: "Confirmar Entrevista y Enviar",
+        successTitle: "¡Entrevista Reservada con Éxito!",
+        successDesc: "¡Muchas gracias! Su cita de entrevista ha sido registrada con la directora de campus y nuestro equipo corporativo de contratación.",
+        sumApplicant: "Nombre del Candidato:",
+        sumCampus: "Ubicación del Campus:",
+        sumDirector: "Directora Asignada:",
+        sumDate: "Fecha de Entrevista:",
+        sumTime: "Hora de Entrevista:",
+        sumFormat: "Formato de Entrevista:",
+        btnAddCal: "Agregar a Calendario (.ics)",
+        chkTitle: "Qué Traer a su Entrevista",
+        chk1: "Identificación oficial con foto vigente (Licencia o ID estatal)",
+        chk2: "Copia del diploma, título universitario o credencial CDA / TCC",
+        chk3: "Registro estatal o historial GaPDS (si lo tiene disponible)",
+        chk4: "Certificados de RCP Pediátrico / Primeros Auxilios / Denunciante Obligatorio",
+        chk5: "2 Referencias profesionales (supervisores o directores anteriores)"
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      document.getElementById('langLabel').textContent = currentLang === 'en' ? 'Español' : 'English';
+      applyTranslations(currentLang);
+    }
+
+    function applyTranslations(lang) {
+      const dict = I18N[lang];
+      if (!dict) return;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+    }
+
+    // Initialize Dates
+    window.addEventListener('DOMContentLoaded', () => {
+      // Auto-set tomorrow as default interview date
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      if (tomorrow.getDay() === 0) tomorrow.setDate(tomorrow.getDate() + 1); // skip Sunday
+      if (tomorrow.getDay() === 6) tomorrow.setDate(tomorrow.getDate() + 2); // skip Saturday
+      const dateStr = tomorrow.toISOString().split('T')[0];
+      
+      const interviewDateInput = document.getElementById('interviewDate');
+      if (interviewDateInput) {
+        interviewDateInput.value = dateStr;
+        interviewDateInput.min = dateStr;
+      }
+      
+      const startDateInput = document.getElementById('startDate');
+      if (startDateInput) {
+        const nextWeek = new Date();
+        nextWeek.setDate(nextWeek.getDate() + 7);
+        startDateInput.value = nextWeek.toISOString().split('T')[0];
+      }
+
+      // Check URL params for location pre-selection (e.g. ?location=memphis or ?campus=hampton)
+      const urlParams = new URLSearchParams(window.location.search);
+      const loc = urlParams.get('campus') || urlParams.get('location');
+      if (loc && CAMPUSES[loc.toLowerCase()]) {
+        const card = document.querySelector(`input[name="campusRadio"][value="${loc.toLowerCase()}"]`)?.closest('.campus-radio-card');
+        if (card) selectCampus(loc.toLowerCase(), card);
+      }
+    });
+
+    function switchView(mode) {
+      const appBox = document.getElementById('interactiveAppBox');
+      const surveyBox = document.getElementById('corporateSurveyBox');
+      const btnApp = document.getElementById('tabQuickApp');
+      const btnSurvey = document.getElementById('tabGhlSurvey');
+
+      if (mode === 'app') {
+        appBox.style.display = 'block';
+        surveyBox.style.display = 'none';
+        btnApp.classList.add('active');
+        btnSurvey.classList.remove('active');
+      } else {
+        appBox.style.display = 'none';
+        surveyBox.style.display = 'block';
+        btnSurvey.classList.add('active');
+        btnApp.classList.remove('active');
+      }
+    }
+
+    function selectCampus(key, cardEl) {
+      currentCampusKey = key;
+      document.querySelectorAll('.campus-radio-card').forEach(c => c.classList.remove('selected'));
+      cardEl.classList.add('selected');
+      const radio = cardEl.querySelector('input[type="radio"]');
+      if (radio) radio.checked = true;
+    }
+
+    function selectTimeSlot(timeStr, btnEl) {
+      document.querySelectorAll('.time-slot-btn').forEach(b => b.classList.remove('selected'));
+      btnEl.classList.add('selected');
+      document.getElementById('selectedTimeSlot').value = timeStr;
+    }
+
+    function jumpToStep(step) {
+      if (step < currentStep) {
+        goToStep(step);
+      }
+    }
+
+    function nextStep(step) {
+      if (step === 2) {
+        const fn = document.getElementById('firstName').value.trim();
+        const ln = document.getElementById('lastName').value.trim();
+        const ph = document.getElementById('phone').value.trim();
+        const em = document.getElementById('email').value.trim();
+        if (!fn || !ln || !ph || !em) {
+          alert('Please fill out all required contact fields before continuing.');
+          return;
+        }
+      }
+      goToStep(step);
+    }
+
+    function prevStep(step) {
+      goToStep(step);
+    }
+
+    function goToStep(step) {
+      currentStep = step;
+      document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
+      const activePane = document.getElementById('stepContent' + step);
+      if (activePane) activePane.classList.add('active');
+
+      // Update progress nodes
+      for (let i = 1; i <= 5; i++) {
+        const node = document.getElementById('stepNode' + i);
+        if (!node) continue;
+        node.classList.remove('active', 'completed');
+        if (i < step) {
+          node.classList.add('completed');
+        } else if (i === step) {
+          node.classList.add('active');
+        }
+      }
+
+      window.scrollTo({ top: document.querySelector('.hero-card').offsetTop, behavior: 'smooth' });
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Registering Appointment...';
+
+      const campusInfo = CAMPUSES[currentCampusKey] || CAMPUSES.memphis;
+      
+      const trainingChecked = Array.from(document.querySelectorAll('input[name="trainingCerts"]:checked')).map(el => el.value);
+
+      const payload = {
+        firstName: document.getElementById('firstName').value.trim(),
+        lastName: document.getElementById('lastName').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        bilingualStatus: document.getElementById('bilingualStatus').value,
+        contactPreference: document.getElementById('contactPref').value,
+        campusKey: currentCampusKey,
+        campusName: campusInfo.name,
+        campusAddress: campusInfo.address,
+        directorEmail: campusInfo.directorEmail,
+        positionDesired: document.getElementById('positionDesired').value,
+        desiredPay: document.getElementById('desiredPay').value,
+        startDate: document.getElementById('startDate').value,
+        credentials: document.getElementById('credentials').value,
+        experienceYears: document.getElementById('experienceYears').value,
+        trainingCompleted: trainingChecked.join(', '),
+        pastExperience: document.getElementById('pastExperience').value.trim(),
+        candidateQuestions: document.getElementById('candidateQuestions').value.trim(),
+        interviewFormat: document.getElementById('interviewFormat').value,
+        interviewDate: document.getElementById('interviewDate').value,
+        interviewTimeSlot: document.getElementById('selectedTimeSlot').value,
+        submittedAt: new Date().toISOString()
+      };
+
+      submittedPayload = payload;
+
+      try {
+        // Dispatch to local Edge Router API
+        const response = await fetch('/api/hiring-intake', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        console.log('[Hiring Intake Response]:', result);
+      } catch (err) {
+        console.warn('[Direct Submission Handled Client-side]:', err.message);
+      }
+
+      // Populate summary card
+      document.getElementById('sumName').textContent = payload.firstName + ' ' + payload.lastName;
+      document.getElementById('sumCampus').textContent = payload.campusName;
+      document.getElementById('sumDirectorEmail').textContent = campusInfo.directorEmail;
+      document.getElementById('sumDate').textContent = payload.interviewDate;
+      document.getElementById('sumTime').textContent = payload.interviewTimeSlot;
+      document.getElementById('sumFormat').textContent = payload.interviewFormat;
+
+      goToStep(5);
+    }
+
+    // Dynamic ICS Calendar File Generator
+    function downloadIcsFile() {
+      if (!submittedPayload) return;
+      const p = submittedPayload;
+      const campus = CAMPUSES[p.campusKey] || CAMPUSES.memphis;
+
+      // Format date for ICS (YYYYMMDDTHHMMSS)
+      const dateParts = p.interviewDate.split('-');
+      const year = dateParts[0];
+      const month = dateParts[1];
+      const day = dateParts[2];
+
+      let hour = 10;
+      let minute = 30;
+      if (p.interviewTimeSlot.includes('09:30')) { hour = 9; minute = 30; }
+      else if (p.interviewTimeSlot.includes('10:30')) { hour = 10; minute = 30; }
+      else if (p.interviewTimeSlot.includes('11:30')) { hour = 11; minute = 30; }
+      else if (p.interviewTimeSlot.includes('01:30')) { hour = 13; minute = 30; }
+      else if (p.interviewTimeSlot.includes('02:30')) { hour = 14; minute = 30; }
+      else if (p.interviewTimeSlot.includes('03:30')) { hour = 15; minute = 30; }
+      else if (p.interviewTimeSlot.includes('04:30')) { hour = 16; minute = 30; }
+
+      const pad = (n) => String(n).padStart(2, '0');
+      const startIso = `${year}${month}${day}T${pad(hour)}${pad(minute)}00`;
+      const endHour = hour + 1;
+      const endIso = `${year}${month}${day}T${pad(endHour)}${pad(minute)}00`;
+
+      const icsContent = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//KIDazzle Early Learning Academy//Hiring Portal//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:REQUEST',
+        'BEGIN:VEVENT',
+        `UID:kidazzle-interview-${Date.now()}@kidazzle.com`,
+        `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
+        `DTSTART:${startIso}`,
+        `DTEND:${endIso}`,
+        `SUMMARY:KIDazzle Educator Interview - ${p.positionDesired}`,
+        `DESCRIPTION:Interview with KIDazzle Early Learning Academy.\\nCandidate: ${p.firstName} ${p.lastName}\\nPosition: ${p.positionDesired}\\nCampus: ${campus.name}\\nDirector: ${campus.directorEmail}\\nPhone: ${campus.phone}\\n\\nPlease bring your Photo ID, diplomas/credentials, and CPR certifications.`,
+        `LOCATION:${campus.name}\\, ${campus.address}`,
+        `ORGANIZER;CN=KIDazzle Careers:MAILTO:${campus.directorEmail}`,
+        `ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=${p.firstName} ${p.lastName}:MAILTO:${p.email}`,
+        'STATUS:CONFIRMED',
+        'BEGIN:VALARM',
+        'TRIGGER:-PT60M',
+        'ACTION:DISPLAY',
+        'DESCRIPTION:Reminder: KIDazzle Educator Interview in 1 Hour',
+        'END:VALARM',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `KIDazzle_Interview_${p.firstName}_${p.lastName}.ics`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
 </body>
 </html>
