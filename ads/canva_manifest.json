@@ -1,0 +1,131 @@
+[
+  {
+    "id": "atlanta_exact_replica",
+    "title": "Metro Atlanta GA — Canva Exact Replica",
+    "regionHeader": "Metro Atlanta GA",
+    "squareFile": "canva_atlanta_exact_replica_1x1.png",
+    "portraitFile": "canva_atlanta_exact_replica_4x5.png",
+    "locations": [
+      "Downtown Atlanta",
+      "Midtown Atlanta",
+      "West End",
+      "College Park",
+      "Hampton"
+    ],
+    "roles": [
+      "Teachers",
+      "GA Lottery Pre-K Teachers",
+      "Drivers",
+      "Floaters"
+    ],
+    "phone": "Call 1877 410 1002",
+    "hasQR": false
+  },
+  {
+    "id": "atlanta_hiring_bar",
+    "title": "Metro Atlanta GA — Master HIRING Bar",
+    "regionHeader": "Metro Atlanta GA",
+    "squareFile": "canva_atlanta_hiring_bar_1x1.png",
+    "portraitFile": "canva_atlanta_hiring_bar_4x5.png",
+    "locations": [
+      "Downtown Atlanta",
+      "Midtown Atlanta",
+      "West End",
+      "College Park",
+      "Hampton"
+    ],
+    "roles": [
+      "Lead & Assistant Teachers",
+      "GA Lottery Pre-K Teachers",
+      "CDL & Van Drivers",
+      "Floaters & Substitutes"
+    ],
+    "phone": "Call 1-877-410-1002",
+    "hasQR": false
+  },
+  {
+    "id": "atlanta_direct_response_qr",
+    "title": "Metro Atlanta GA — Direct Response + QR",
+    "regionHeader": "Metro Atlanta GA",
+    "squareFile": "canva_atlanta_direct_response_qr_1x1.png",
+    "portraitFile": "canva_atlanta_direct_response_qr_4x5.png",
+    "locations": [
+      "Downtown Atlanta",
+      "Midtown Atlanta",
+      "West End (Ralph David Abernathy)",
+      "College Park (Phoenix Blvd)",
+      "Hampton (FAA Center)"
+    ],
+    "roles": [
+      "Lead Teachers ($11–$18+/hr)",
+      "GA Lottery Pre-K Teachers",
+      "Drivers & Transportation",
+      "Floaters & Support Staff"
+    ],
+    "phone": "Call 1-877-410-1002",
+    "hasQR": true
+  },
+  {
+    "id": "memphis_blueprint",
+    "title": "Memphis TN — Flying Start FAA Center",
+    "regionHeader": "Memphis TN",
+    "squareFile": "canva_memphis_blueprint_1x1.png",
+    "portraitFile": "canva_memphis_blueprint_4x5.png",
+    "locations": [
+      "Memphis Flying Start (FAA)",
+      "3229 Democrat Rd",
+      "Airport / Commercial District",
+      "Shelby County Metro"
+    ],
+    "roles": [
+      "Lead & Assistant Teachers",
+      "Infant & Toddler Specialists",
+      "Transportation & Drivers",
+      "Floaters & Kitchen Staff"
+    ],
+    "phone": "Call 1-877-410-1002",
+    "hasQR": true
+  },
+  {
+    "id": "miami_blueprint",
+    "title": "Miami / Doral FL — Tailwinds FAA Center",
+    "regionHeader": "Miami / Doral FL",
+    "squareFile": "canva_miami_blueprint_1x1.png",
+    "portraitFile": "canva_miami_blueprint_4x5.png",
+    "locations": [
+      "Tailwinds Miami / Doral (FAA)",
+      "8400 NW 36th St #120",
+      "Doral Commercial Hub",
+      "Miami-Dade County"
+    ],
+    "roles": [
+      "Lead Teachers (Bilingual)",
+      "Florida VPK Educators",
+      "Infant & Toddler Caregivers",
+      "Floaters & Support Staff"
+    ],
+    "phone": "Call 1-877-410-1002",
+    "hasQR": true
+  },
+  {
+    "id": "multicampus_blueprint",
+    "title": "Southeast Network — 7 Campus Overview",
+    "regionHeader": "Southeast Campus Network",
+    "squareFile": "canva_multicampus_blueprint_1x1.png",
+    "portraitFile": "canva_multicampus_blueprint_4x5.png",
+    "locations": [
+      "Metro Atlanta, GA (5 Campuses)",
+      "Memphis, TN (FAA Center)",
+      "Miami / Doral, FL (FAA Center)",
+      "All 7 Regional Academies"
+    ],
+    "roles": [
+      "Lead Teachers & Co-Teachers",
+      "GA Pre-K & FL VPK Educators",
+      "Transportation Drivers",
+      "Floaters & Substitute Pool"
+    ],
+    "phone": "Call 1-877-410-1002",
+    "hasQR": true
+  }
+]

@@ -1,129 +1,331 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KIDazzle Hiring Ad Campaign Suite | Executive Gallery</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 40px 20px; margin: 0; }
-    .container { max-width: 1400px; margin: 0 auto; }
-    h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; color: #ffffff; text-align: center; }
-    p.subtitle { text-align: center; color: #94a3b8; font-size: 16px; margin-bottom: 40px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 32px; }
-    .card { background: #1e293b; border-radius: 16px; padding: 20px; border: 1px solid #334155; }
-    .card h2 { font-size: 20px; font-weight: 800; color: #fcd34d; margin-top: 0; margin-bottom: 8px; }
-    .card p { font-size: 13px; color: #94a3b8; margin-bottom: 16px; }
-    .img-wrap { border-radius: 12px; overflow: hidden; border: 2px solid #475569; background: #000; }
-    .img-wrap img { width: 100%; height: auto; display: block; }
-    .btn-row { margin-top: 14px; display: flex; gap: 10px; }
-    .btn { background: #2563eb; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; text-align: center; flex: 1; }
-    .btn:hover { background: #1d4ed8; }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #090d16;
+      color: #f8fafc;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1440px; margin: 0 auto; }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: #000;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 34px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      color: #94a3b8;
+      font-size: 16px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin: 44px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title span.tag {
+      font-size: 13px;
+      font-weight: 700;
+      background: #0284c7;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: #0f172a;
+      border-radius: 18px;
+      padding: 22px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-header {
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 4px;
+    }
+    .card p.format-tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .img-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #334155;
+      background: #ffffff;
+      position: relative;
+    }
+    .img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .btn-row {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn.secondary {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #e2e8f0;
+    }
+    .btn.secondary:hover { background: #334155; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🎓 KIDazzle Child Care &bull; Hiring Campaign Ad Suite</h1>
-    <p class="subtitle">Designed to Director Robert Hill's exact specifications: White Header Logo &bull; Hard Black "HIRING" Bar &bull; $11-$18+/Hr &bull; CDA Training &bull; Scannable QR Code</p>
-    <div class="grid">
-      
-        <div class="card">
-          <h2>ATLANTA, GA & SURROUNDING AREA (1X1)</h2>
-          <p>Format: Square Feed (1080x1080 @ 2x Retina) &bull; Output: kidazzle_ad_atlanta_1x1.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_atlanta_1x1.png" alt="ATLANTA, GA & SURROUNDING AREA">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_atlanta_1x1.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_atlanta_1x1.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>ATLANTA, GA & SURROUNDING AREA (4X5)</h2>
-          <p>Format: Portrait Feed (1080x1350 @ 2x Retina) &bull; Output: kidazzle_ad_atlanta_4x5.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_atlanta_4x5.png" alt="ATLANTA, GA & SURROUNDING AREA">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_atlanta_4x5.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_atlanta_4x5.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>MEMPHIS, TENNESSEE (1X1)</h2>
-          <p>Format: Square Feed (1080x1080 @ 2x Retina) &bull; Output: kidazzle_ad_memphis_1x1.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_memphis_1x1.png" alt="MEMPHIS, TENNESSEE">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_memphis_1x1.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_memphis_1x1.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>MEMPHIS, TENNESSEE (4X5)</h2>
-          <p>Format: Portrait Feed (1080x1350 @ 2x Retina) &bull; Output: kidazzle_ad_memphis_4x5.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_memphis_4x5.png" alt="MEMPHIS, TENNESSEE">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_memphis_4x5.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_memphis_4x5.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>MIAMI / DORAL, FLORIDA (1X1)</h2>
-          <p>Format: Square Feed (1080x1080 @ 2x Retina) &bull; Output: kidazzle_ad_miami_1x1.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_miami_1x1.png" alt="MIAMI / DORAL, FLORIDA">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_miami_1x1.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_miami_1x1.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>MIAMI / DORAL, FLORIDA (4X5)</h2>
-          <p>Format: Portrait Feed (1080x1350 @ 2x Retina) &bull; Output: kidazzle_ad_miami_4x5.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_miami_4x5.png" alt="MIAMI / DORAL, FLORIDA">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_miami_4x5.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_miami_4x5.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>ALL 7 CAMPUSES: GA • TN • FL (1X1)</h2>
-          <p>Format: Square Feed (1080x1080 @ 2x Retina) &bull; Output: kidazzle_ad_multicampus_1x1.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_multicampus_1x1.png" alt="ALL 7 CAMPUSES: GA • TN • FL">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_multicampus_1x1.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_multicampus_1x1.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h2>ALL 7 CAMPUSES: GA • TN • FL (4X5)</h2>
-          <p>Format: Portrait Feed (1080x1350 @ 2x Retina) &bull; Output: kidazzle_ad_multicampus_4x5.png</p>
-          <div class="img-wrap">
-            <img src="./ads/kidazzle_ad_multicampus_4x5.png" alt="ALL 7 CAMPUSES: GA • TN • FL">
-          </div>
-          <div class="btn-row">
-            <a href="./ads/kidazzle_ad_multicampus_4x5.png" download class="btn">&#8681; Download High-Res PNG</a>
-            <a href="./ads/kidazzle_ad_multicampus_4x5.png" target="_blank" class="btn">&#128065; View Full 2160p</a>
-          </div>
-        </div>
-      
+    <header>
+      <div class="badge">Director Robert Hill &bull; Promotional Campaign</div>
+      <h1>KIDazzle Hiring Ad Creative Suite</h1>
+      <p class="subtitle">Complete series of high-impact recruitment graphics designed to Robert Hill's exact Canva blueprint specifications and audio directives. Rendered in ultra HD 2x Retina scale (2160p).</p>
+    </header>
+
+    <!-- SECTION 1: CANVA BLUEPRINT DIRECT SERIES -->
+    <div class="section-title">
+      🎯 Canva Blueprint Direct Series
+      <span class="tag">Exact Layout Match</span>
     </div>
+    <div class="grid">
+
+      <!-- Atlanta Exact Replica -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Metro Atlanta GA &bull; Exact Canva Replica</h2>
+          <p class="format-tag">1:1 Square (2160x2160 @ 2x) &bull; Reference Match</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_atlanta_exact_replica_1x1.png" alt="Metro Atlanta Exact Replica">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_atlanta_exact_replica_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_atlanta_exact_replica_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- Atlanta Master HIRING Bar -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Metro Atlanta GA &bull; Master HIRING Bar</h2>
+          <p class="format-tag">1:1 Square (2160x2160 @ 2x) &bull; Bold "HIRING" Bar</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_atlanta_hiring_bar_1x1.png" alt="Metro Atlanta Master HIRING Bar">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_atlanta_hiring_bar_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_atlanta_hiring_bar_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- Atlanta Direct Response with QR -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Metro Atlanta GA &bull; Direct Response + QR</h2>
+          <p class="format-tag">1:1 Square (2160x2160 @ 2x) &bull; Phone + QR + Portal</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_atlanta_direct_response_qr_1x1.png" alt="Metro Atlanta Direct Response">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_atlanta_direct_response_qr_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_atlanta_direct_response_qr_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- Atlanta Direct Response 4x5 Portrait -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Metro Atlanta GA &bull; Vertical Portrait (4:5)</h2>
+          <p class="format-tag">4:5 Feed Portrait (2160x2700 @ 2x) &bull; Mobile Feed Master</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_atlanta_direct_response_qr_4x5.png" alt="Metro Atlanta 4x5 Portrait">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_atlanta_direct_response_qr_4x5.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_atlanta_direct_response_qr_4x5.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- Memphis Blueprint -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Memphis TN &bull; Flying Start FAA Center</h2>
+          <p class="format-tag">1:1 Square (2160x2160 @ 2x) &bull; Memphis Edition</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_memphis_blueprint_1x1.png" alt="Memphis TN Blueprint">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_memphis_blueprint_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_memphis_blueprint_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- Miami / Doral Blueprint -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Miami / Doral FL &bull; Tailwinds FAA Center</h2>
+          <p class="format-tag">1:1 Square (2160x2160 @ 2x) &bull; Miami Edition</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_miami_blueprint_1x1.png" alt="Miami / Doral FL Blueprint">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_miami_blueprint_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_miami_blueprint_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- Multi-Campus Network Blueprint -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Southeast Campus Network &bull; 7 Locations</h2>
+          <p class="format-tag">1:1 Square (2160x2160 @ 2x) &bull; Network Edition</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./canva_multicampus_blueprint_1x1.png" alt="Multi-Campus Network Blueprint">
+        </div>
+        <div class="btn-row">
+          <a href="./canva_multicampus_blueprint_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./canva_multicampus_blueprint_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 2: DOCUMENTARY CLASSROOM PHOTO HERO SERIES -->
+    <div class="section-title">
+      📸 Documentary Classroom Photo Hero Series
+      <span class="tag">Authentic Early Learning Visuals</span>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Atlanta, GA & Surrounding Area (1:1)</h2>
+          <p class="format-tag">Square Feed (1080x1080 @ 2x Retina) &bull; kidazzle_ad_atlanta_1x1.png</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./kidazzle_ad_atlanta_1x1.png" alt="Atlanta Photo Hero 1x1">
+        </div>
+        <div class="btn-row">
+          <a href="./kidazzle_ad_atlanta_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./kidazzle_ad_atlanta_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Atlanta, GA & Surrounding Area (4:5)</h2>
+          <p class="format-tag">Portrait Feed (1080x1350 @ 2x Retina) &bull; kidazzle_ad_atlanta_4x5.png</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./kidazzle_ad_atlanta_4x5.png" alt="Atlanta Photo Hero 4x5">
+        </div>
+        <div class="btn-row">
+          <a href="./kidazzle_ad_atlanta_4x5.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./kidazzle_ad_atlanta_4x5.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Memphis, Tennessee (1:1)</h2>
+          <p class="format-tag">Square Feed (1080x1080 @ 2x Retina) &bull; kidazzle_ad_memphis_1x1.png</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./kidazzle_ad_memphis_1x1.png" alt="Memphis Photo Hero 1x1">
+        </div>
+        <div class="btn-row">
+          <a href="./kidazzle_ad_memphis_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./kidazzle_ad_memphis_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Miami / Doral, Florida (1:1)</h2>
+          <p class="format-tag">Square Feed (1080x1080 @ 2x Retina) &bull; kidazzle_ad_miami_1x1.png</p>
+        </div>
+        <div class="img-wrap">
+          <img src="./kidazzle_ad_miami_1x1.png" alt="Miami Photo Hero 1x1">
+        </div>
+        <div class="btn-row">
+          <a href="./kidazzle_ad_miami_1x1.png" download class="btn">⬇ Download 2160p PNG</a>
+          <a href="./kidazzle_ad_miami_1x1.png" target="_blank" class="btn secondary">🔍 Open Full Res</a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </body>
 </html>
-  
