@@ -36,20 +36,24 @@ All incoming ad campaigns, Indeed listings, and career links route to the unifie
 
 ## ⚡ Automated Candidate Dispatch & Routing Workflow
 
-When a candidate applies on `/hiring`:
+The recruitment process operates via a high-efficiency 2-step progression:
+1. **Step 1 — Initial Phone Screening Interview:** A 10–15 minute screening call where the Campus Director calls the applicant directly to review qualifications, desired pay, scheduling, and role alignment. No in-person documentation is required for this step.
+2. **Step 2 — Secondary In-Person Campus Walkthrough & Onboarding:** Qualified candidates who pass the phone screen are invited to an in-person facility walkthrough and classroom meet-and-greet, at which point the required onboarding documentation (ID, credentials, CPR, Form 104 medical statement, hiring packet) is requested and verified.
+
 ```mermaid
 graph TD
     A[Candidate Visits /hiring via Ads or Direct] --> B[Fills 4-Step Interactive Screening Application]
     B --> C[Selects Campus: Memphis, College Park, West End, Summit, AFC, Hampton, or Miami]
-    C --> D[Picks Preferred Interview Date & Time Window]
+    C --> D[Picks Preferred Date & Time for Phone Screening]
     D --> E[Submits to /api/hiring-intake]
     E --> F[KIDazzle Hiring Router scripts/kidazzle_hiring_router.cjs]
-    F --> G[1. Generates RFC 5545 .ics Calendar Invitation]
-    F --> H[2. Sends HTML Briefing Email to Site Director + CC Careers]
-    F --> I[3. Sends Confirmation Email + Checklist to Candidate]
+    F --> G[1. Generates RFC 5545 .ics Calendar Reminder]
+    F --> H[2. Sends Director Briefing Email + 1-Click Call Candidate]
+    F --> I[3. Sends Candidate Confirmation Email + Phone Screening Prep]
     F --> J[4. Upserts Contact to GHL with Tag 'potential staff']
     F --> K[5. Sets Custom Field 'Contact Persona' = 'Job Applicant / Educator']
-    F --> L[6. Logs Candidate Record to reports/telemetry/hiring_applicants.json]
+    F --> L[6. Director Calls Candidate at Scheduled Time]
+    L --> M[Step 2: In-Person Campus Walkthrough & Hiring Packet Verification]
 ```
 
 ---

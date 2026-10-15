@@ -1275,16 +1275,17 @@
           <!-- STEP 4: Calendar Date & Time Slot Selection -->
           <div class="step-content" id="stepContent4">
             <div class="step-header">
-              <h2 data-i18n="s4Title">Step 4: Book Your Interview Appointment</h2>
-              <p data-i18n="s4Desc">Select your preferred date, interview format, and time slot. Our site director will be notified and confirm your spot immediately.</p>
+              <h2 data-i18n="s4Title">Step 4: Schedule Your Initial Phone Screening</h2>
+              <p data-i18n="s4Desc">Select your preferred date and time slot for a quick 10–15 minute phone interview with our campus director to review your qualifications. Qualified candidates will be invited to a secondary in-person campus walkthrough!</p>
             </div>
 
             <div class="form-grid-2">
               <div class="form-group">
                 <label class="form-label"><span data-i18n="lblInterviewFormat">Interview Format</span> <span class="req">*</span></label>
                 <select id="interviewFormat" class="form-select" required>
-                  <option value="In-Person Campus Walkthrough & Interview" selected>In-Person Campus Walkthrough &amp; Interview</option>
-                  <option value="Virtual Video Interview (Zoom / Google Meet)">Virtual Video Interview (Zoom / Google Meet)</option>
+                  <option value="10-15 Minute Phone Screening Interview (Director calls you)" selected>10–15 Minute Phone Screening Call (Director will call your phone)</option>
+                  <option value="Virtual Video Call (Zoom / Google Meet)">Virtual Video Call (Zoom / Google Meet)</option>
+                  <option value="In-Person Campus Walkthrough (Upon Request)">In-Person Campus Walkthrough (Upon Request)</option>
                 </select>
               </div>
 
@@ -1309,8 +1310,8 @@
             </div>
 
             <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 14px 18px; margin-top: 14px; font-size: 0.88rem; color: #1e3a8a;">
-              <i class="fa-solid fa-circle-info" style="margin-right: 6px;"></i>
-              <span data-i18n="appointmentNotice">Submitting this form immediately books your appointment on the Director's calendar, dispatches your email confirmation, and creates your candidate profile in our HR pipeline.</span>
+              <i class="fa-solid fa-phone" style="margin-right: 6px;"></i>
+              <span data-i18n="appointmentNotice">Our Campus Director will call you directly at your provided phone number at your scheduled time. Please be in a quiet location ready to speak for 10–15 minutes.</span>
             </div>
 
             <div class="btn-row">
@@ -1318,8 +1319,8 @@
                 <i class="fa-solid fa-arrow-left"></i> <span data-i18n="btnBack">Back</span>
               </button>
               <button type="submit" class="btn-submit" id="submitBtn">
-                <i class="fa-solid fa-calendar-check"></i>
-                <span data-i18n="btnConfirmSubmit">Confirm Interview &amp; Submit</span>
+                <i class="fa-solid fa-phone-volume"></i>
+                <span data-i18n="btnConfirmSubmit">Confirm Phone Screening &amp; Submit</span>
               </button>
             </div>
           </div>
@@ -1328,11 +1329,11 @@
           <div class="step-content" id="stepContent5">
             <div class="success-card">
               <div class="success-icon-wrap">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-phone-flip"></i>
               </div>
-              <h2 data-i18n="successTitle">Interview Successfully Booked!</h2>
+              <h2 data-i18n="successTitle">Phone Screening Successfully Scheduled!</h2>
               <p data-i18n="successDesc">
-                Thank you! Your educator interview appointment has been registered with our campus director and our corporate HR leadership team.
+                Thank you! Your initial 10–15 minute phone screening appointment has been registered with our campus director. Our Director will call you directly at your scheduled time.
               </p>
 
               <!-- Dynamic Appointment Summary -->
@@ -1342,7 +1343,11 @@
                   <span class="summary-value" id="sumName">—</span>
                 </div>
                 <div class="summary-row">
-                  <span class="summary-label" data-i18n="sumCampus">Campus Location:</span>
+                  <span class="summary-label" data-i18n="sumPhone">Phone to Call:</span>
+                  <span class="summary-value" id="sumPhone">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label" data-i18n="sumCampus">Target Campus:</span>
                   <span class="summary-value" id="sumCampus">—</span>
                 </div>
                 <div class="summary-row">
@@ -1350,47 +1355,46 @@
                   <span class="summary-value" id="sumDirectorEmail">—</span>
                 </div>
                 <div class="summary-row">
-                  <span class="summary-label" data-i18n="sumDate">Interview Date:</span>
+                  <span class="summary-label" data-i18n="sumDate">Screening Date:</span>
                   <span class="summary-value" id="sumDate">—</span>
                 </div>
                 <div class="summary-row">
-                  <span class="summary-label" data-i18n="sumTime">Interview Time:</span>
+                  <span class="summary-label" data-i18n="sumTime">Screening Time:</span>
                   <span class="summary-value" id="sumTime">—</span>
                 </div>
                 <div class="summary-row">
                   <span class="summary-label" data-i18n="sumFormat">Interview Format:</span>
-                  <span class="summary-value" id="sumFormat">—</span>
+                  <span class="summary-value" id="sumFormat">10–15 Min Phone Call</span>
                 </div>
               </div>
 
               <!-- 1-Click Add to Calendar Download -->
               <button type="button" class="calendar-dl-btn" onclick="downloadIcsFile()">
                 <i class="fa-solid fa-calendar-plus"></i>
-                <span data-i18n="btnAddCal">Add to Google / Apple / Outlook Calendar (.ics)</span>
+                <span data-i18n="btnAddCal">Add Call Reminder to Calendar (.ics)</span>
               </button>
 
-              <!-- Checklist: What to Bring -->
+              <!-- Preparation & Secondary Info -->
               <div class="checklist-box">
-                <h3 data-i18n="chkTitle"><i class="fa-solid fa-clipboard-list" style="color: #1e3a8a;"></i> What to Bring to Your Interview</h3>
+                <h3 data-i18n="prepTitle"><i class="fa-solid fa-clipboard-check" style="color: #1e3a8a;"></i> How to Prepare for Your Phone Screening</h3>
                 <div class="checklist-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="chk1">Valid Government-Issued Photo ID (Driver's License or State ID)</span>
+                  <span data-i18n="prep1">Be available in a quiet space with good cell phone reception at your appointment time.</span>
                 </div>
                 <div class="checklist-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="chk2">Copy of Highest Diploma, Degree, or CDA / TCC Credential</span>
+                  <span data-i18n="prep2">Have your resume, certifications, or notes on your past childcare experience handy.</span>
                 </div>
                 <div class="checklist-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="chk3">Bright from the Start / GaPDS / State Registry Transcript (if available)</span>
+                  <span data-i18n="prep3">Prepare any questions you have regarding our curriculum (GELDS), CDA sponsorship, or benefits.</span>
                 </div>
-                <div class="checklist-item">
-                  <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="chk4">Pediatric CPR &amp; First Aid or Mandated Reporter Certificates</span>
-                </div>
-                <div class="checklist-item">
-                  <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="chk5">2 Professional References (past supervisors or directors)</span>
+
+                <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e2e8f0;">
+                  <strong style="color: #1e3a8a; font-size: 0.92rem;" data-i18n="secTitle"><i class="fa-solid fa-route"></i> Secondary Step (Campus Walkthrough):</strong>
+                  <p style="font-size: 0.85rem; color: #475569; margin-top: 6px; line-height: 1.5;" data-i18n="secDesc">
+                    During this initial phone call, our Director will verify your qualifications and compensation. Qualified candidates will then be invited to <strong>Step 2: In-Person Campus Walkthrough &amp; Classroom Meet-and-Greet</strong>, at which time our team will provide instructions on the secondary hiring packet documents to bring (Photo ID, diploma/credentials, CPR, and Form 104 medical statement).
+                  </p>
                 </div>
               </div>
 
@@ -1541,29 +1545,30 @@
         lblStateTraining: "State-Approved Training Completed (Select all that apply)",
         lblExperienceDetail: "Describe your childcare experience in the past (Age groups, curriculum, activities):",
         lblCandidateQuestions: "Do you have any specific questions for the Director during your interview?",
-        btnNextStep4: "Continue to Interview Calendar",
-        s4Title: "Step 4: Book Your Interview Appointment",
-        s4Desc: "Select your preferred date, interview format, and time slot. Our site director will be notified and confirm your spot immediately.",
+        btnNextStep4: "Continue to Phone Screening Calendar",
+        s4Title: "Step 4: Schedule Your Initial Phone Screening",
+        s4Desc: "Select your preferred date and time slot for a quick 10–15 minute phone interview with our campus director to review your qualifications. Qualified candidates will be invited to a secondary in-person campus walkthrough!",
         lblInterviewFormat: "Interview Format",
         lblInterviewDate: "Preferred Interview Date",
         lblInterviewTime: "Choose Your Best Time Slot",
-        appointmentNotice: "Submitting this form immediately books your appointment on the Director's calendar, dispatches your email confirmation, and creates your candidate profile in our HR pipeline.",
-        btnConfirmSubmit: "Confirm Interview & Submit",
-        successTitle: "Interview Successfully Booked!",
-        successDesc: "Thank you! Your educator interview appointment has been registered with our campus director and our corporate HR leadership team.",
+        appointmentNotice: "Our Campus Director will call you directly at your provided phone number at your scheduled time. Please be in a quiet location ready to speak for 10–15 minutes.",
+        btnConfirmSubmit: "Confirm Phone Screening & Submit",
+        successTitle: "Phone Screening Successfully Scheduled!",
+        successDesc: "Thank you! Your initial 10–15 minute phone screening appointment has been registered with our campus director. Our Director will call you directly at your scheduled time.",
         sumApplicant: "Candidate Name:",
-        sumCampus: "Campus Location:",
+        sumPhone: "Phone to Call:",
+        sumCampus: "Target Campus:",
         sumDirector: "Assigned Director:",
-        sumDate: "Interview Date:",
-        sumTime: "Interview Time:",
+        sumDate: "Screening Date:",
+        sumTime: "Screening Time:",
         sumFormat: "Interview Format:",
-        btnAddCal: "Add to Google / Apple / Outlook Calendar (.ics)",
-        chkTitle: "What to Bring to Your Interview",
-        chk1: "Valid Government-Issued Photo ID (Driver's License or State ID)",
-        chk2: "Copy of Highest Diploma, Degree, or CDA / TCC Credential",
-        chk3: "Bright from the Start / GaPDS / State Registry Transcript (if available)",
-        chk4: "Pediatric CPR & First Aid or Mandated Reporter Certificates",
-        chk5: "2 Professional References (past supervisors or directors)"
+        btnAddCal: "Add Call Reminder to Calendar (.ics)",
+        prepTitle: "How to Prepare for Your Phone Screening",
+        prep1: "Be available in a quiet space with good cell phone reception at your appointment time.",
+        prep2: "Have your resume, certifications, or notes on your past childcare experience handy.",
+        prep3: "Prepare any questions you have regarding our curriculum (GELDS), CDA sponsorship, or benefits.",
+        secTitle: "Secondary Step (Campus Walkthrough):",
+        secDesc: "During this initial phone call, our Director will verify your qualifications and compensation. Qualified candidates will then be invited to Step 2: In-Person Campus Walkthrough & Classroom Meet-and-Greet, at which time our team will provide instructions on the secondary hiring packet documents to bring (Photo ID, diploma/credentials, CPR, and Form 104 medical statement)."
       },
       es: {
         tagline: "La Aldea Que Crece Contigo",
@@ -1611,28 +1616,29 @@
         lblExperienceDetail: "¿Qué experiencias ha tenido con el cuidado de niños en el pasado?",
         lblCandidateQuestions: "¿Tiene alguna pregunta para la entrevista o la directora?",
         btnNextStep4: "Continuar al Calendario",
-        s4Title: "Paso 4: Reserve su Cita de Entrevista",
-        s4Desc: "Seleccione su fecha, formato de entrevista y horario. La directora del centro confirmará su espacio inmediatamente.",
+        s4Title: "Paso 4: Reserve su Entrevista Telefónica Inicial",
+        s4Desc: "Seleccione su fecha y horario para una breve llamada telefónica de 10 a 15 minutos con nuestra directora para revisar sus calificaciones. ¡Las candidatas calificadas serán invitadas a un recorrido en persona por el campus!",
         lblInterviewFormat: "Formato de Entrevista",
-        lblInterviewDate: "Fecha de Entrevista Preferida",
+        lblInterviewDate: "Fecha de Entrevista Telefónica",
         lblInterviewTime: "Elija su Mejor Horario",
-        appointmentNotice: "Al enviar este formulario, su cita queda reservada en el calendario de la directora, se envía su confirmación por correo y se crea su perfil en nuestro sistema de RRHH.",
-        btnConfirmSubmit: "Confirmar Entrevista y Enviar",
-        successTitle: "¡Entrevista Reservada con Éxito!",
-        successDesc: "¡Muchas gracias! Su cita de entrevista ha sido registrada con la directora de campus y nuestro equipo corporativo de contratación.",
+        appointmentNotice: "Nuestra directora de campus la llamará directamente a su teléfono registrado a la hora programada. Por favor esté en un lugar tranquilo.",
+        btnConfirmSubmit: "Confirmar Entrevista Telefónica y Enviar",
+        successTitle: "¡Entrevista Telefónica Programada con Éxito!",
+        successDesc: "¡Muchas gracias! Su llamada telefónica inicial de 10 a 15 minutos ha sido registrada con la directora de campus. La llamaremos a su hora seleccionada.",
         sumApplicant: "Nombre del Candidato:",
+        sumPhone: "Teléfono a Llamar:",
         sumCampus: "Ubicación del Campus:",
         sumDirector: "Directora Asignada:",
-        sumDate: "Fecha de Entrevista:",
-        sumTime: "Hora de Entrevista:",
+        sumDate: "Fecha de Llamada:",
+        sumTime: "Hora de Llamada:",
         sumFormat: "Formato de Entrevista:",
-        btnAddCal: "Agregar a Calendario (.ics)",
-        chkTitle: "Qué Traer a su Entrevista",
-        chk1: "Identificación oficial con foto vigente (Licencia o ID estatal)",
-        chk2: "Copia del diploma, título universitario o credencial CDA / TCC",
-        chk3: "Registro estatal o historial GaPDS (si lo tiene disponible)",
-        chk4: "Certificados de RCP Pediátrico / Primeros Auxilios / Denunciante Obligatorio",
-        chk5: "2 Referencias profesionales (supervisores o directores anteriores)"
+        btnAddCal: "Agregar Recordatorio a Calendario (.ics)",
+        prepTitle: "Cómo Prepararse para su Entrevista Telefónica",
+        prep1: "Esté disponible en un lugar tranquilo con buena señal telefónica a la hora de su cita.",
+        prep2: "Tenga a mano su currículum, certificaciones o notas sobre su experiencia previa en cuidado infantil.",
+        prep3: "Prepare cualquier pregunta sobre nuestro plan de estudios (GELDS), patrocinio de CDA o beneficios.",
+        secTitle: "Paso Secundario (Recorrido por el Campus):",
+        secDesc: "Durante esta llamada inicial, nuestra Directora confirmará sus calificaciones y compensación. Las candidatas seleccionadas serán invitadas al Paso 2: Recorrido en persona por el campus y observación en el aula, momento en el cual se le indicará la documentación de contratación que debe presentar (identificación, títulos/credenciales, RCP y examen médico Form 104)."
       }
     };
 
@@ -1814,6 +1820,7 @@
 
       // Populate summary card
       document.getElementById('sumName').textContent = payload.firstName + ' ' + payload.lastName;
+      document.getElementById('sumPhone').textContent = payload.phone;
       document.getElementById('sumCampus').textContent = payload.campusName;
       document.getElementById('sumDirectorEmail').textContent = campusInfo.directorEmail;
       document.getElementById('sumDate').textContent = payload.interviewDate;
@@ -1857,20 +1864,20 @@
         'CALSCALE:GREGORIAN',
         'METHOD:REQUEST',
         'BEGIN:VEVENT',
-        `UID:kidazzle-interview-${Date.now()}@kidazzle.com`,
+        `UID:kidazzle-screening-${Date.now()}@kidazzle.com`,
         `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
         `DTSTART:${startIso}`,
         `DTEND:${endIso}`,
-        `SUMMARY:KIDazzle Educator Interview - ${p.positionDesired}`,
-        `DESCRIPTION:Interview with KIDazzle Early Learning Academy.\\nCandidate: ${p.firstName} ${p.lastName}\\nPosition: ${p.positionDesired}\\nCampus: ${campus.name}\\nDirector: ${campus.directorEmail}\\nPhone: ${campus.phone}\\n\\nPlease bring your Photo ID, diplomas/credentials, and CPR certifications.`,
-        `LOCATION:${campus.name}\\, ${campus.address}`,
+        `SUMMARY:KIDazzle Phone Screening: ${p.firstName} ${p.lastName} (${p.positionDesired})`,
+        `DESCRIPTION:Initial 10-15 Minute Phone Screening Call with KIDazzle Early Learning Academy.\\nCandidate: ${p.firstName} ${p.lastName}\\nPhone: ${p.phone}\\nFormat: Phone Call (Director calls candidate)\\nCampus: ${campus.name}\\nDirector: ${campus.directorEmail}\\n\\nNote: If qualified, candidate will be invited to the secondary in-person campus walkthrough and classroom meet-and-greet.\\n\\nScreening Info:\\n- Desired Pay: ${p.desiredPay}\\n- Credentials: ${p.credentials}\\n- Experience: ${p.experienceYears}`,
+        `LOCATION:Phone Call (Director calls candidate at ${p.phone})`,
         `ORGANIZER;CN=KIDazzle Careers:MAILTO:${campus.directorEmail}`,
         `ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=${p.firstName} ${p.lastName}:MAILTO:${p.email}`,
         'STATUS:CONFIRMED',
         'BEGIN:VALARM',
-        'TRIGGER:-PT60M',
+        'TRIGGER:-PT15M',
         'ACTION:DISPLAY',
-        'DESCRIPTION:Reminder: KIDazzle Educator Interview in 1 Hour',
+        'DESCRIPTION:Reminder: KIDazzle Phone Screening in 15 Minutes',
         'END:VALARM',
         'END:VEVENT',
         'END:VCALENDAR'
@@ -1879,7 +1886,7 @@
       const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `KIDazzle_Interview_${p.firstName}_${p.lastName}.ics`;
+      link.download = `KIDazzle_Phone_Screening_${p.firstName}_${p.lastName}.ics`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
