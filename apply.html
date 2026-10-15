@@ -592,7 +592,7 @@
     /* Calendar Booking Slots */
     .time-slots-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
       gap: 10px;
       margin-top: 10px;
     }
@@ -1296,22 +1296,22 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label"><span data-i18n="lblInterviewTime">Choose Your Best Time Slot</span> <span class="req">*</span></label>
+              <label class="form-label"><span data-i18n="lblInterviewTime">Choose Your Best Time Slot (15-Minute Screening)</span> <span class="req">*</span></label>
               <div class="time-slots-grid" id="timeSlotsContainer">
-                <div class="time-slot-btn" onclick="selectTimeSlot('09:30 AM', this)">9:30 AM</div>
-                <div class="time-slot-btn selected" onclick="selectTimeSlot('10:30 AM', this)">10:30 AM</div>
-                <div class="time-slot-btn" onclick="selectTimeSlot('11:30 AM', this)">11:30 AM</div>
-                <div class="time-slot-btn" onclick="selectTimeSlot('01:30 PM', this)">1:30 PM</div>
-                <div class="time-slot-btn" onclick="selectTimeSlot('02:30 PM', this)">2:30 PM</div>
-                <div class="time-slot-btn" onclick="selectTimeSlot('03:30 PM', this)">3:30 PM</div>
-                <div class="time-slot-btn" onclick="selectTimeSlot('04:30 PM', this)">4:30 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('09:30 AM – 09:45 AM', this)">9:30 AM – 9:45 AM</div>
+                <div class="time-slot-btn selected" onclick="selectTimeSlot('10:30 AM – 10:45 AM', this)">10:30 AM – 10:45 AM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('11:30 AM – 11:45 AM', this)">11:30 AM – 11:45 AM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('01:30 PM – 01:45 PM', this)">1:30 PM – 1:45 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('02:30 PM – 02:45 PM', this)">2:30 PM – 2:45 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('03:30 PM – 03:45 PM', this)">3:30 PM – 3:45 PM</div>
+                <div class="time-slot-btn" onclick="selectTimeSlot('04:30 PM – 04:45 PM', this)">4:30 PM – 4:45 PM</div>
               </div>
-              <input type="hidden" id="selectedTimeSlot" value="10:30 AM">
+              <input type="hidden" id="selectedTimeSlot" value="10:30 AM – 10:45 AM">
             </div>
 
             <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 14px 18px; margin-top: 14px; font-size: 0.88rem; color: #1e3a8a;">
               <i class="fa-solid fa-phone" style="margin-right: 6px;"></i>
-              <span data-i18n="appointmentNotice">Our Campus Director will call you directly at your provided phone number at your scheduled time. Please be in a quiet location ready to speak for 10–15 minutes.</span>
+              <span data-i18n="appointmentNotice">Our Campus Director will call you directly at your provided phone number at your scheduled time. Please be in a quiet location ready for a quick 15-minute phone interview.</span>
             </div>
 
             <div class="btn-row">
@@ -1320,7 +1320,7 @@
               </button>
               <button type="submit" class="btn-submit" id="submitBtn">
                 <i class="fa-solid fa-phone-volume"></i>
-                <span data-i18n="btnConfirmSubmit">Confirm Phone Screening &amp; Submit</span>
+                <span data-i18n="btnConfirmSubmit">Confirm 15-Min Screening &amp; Submit</span>
               </button>
             </div>
           </div>
@@ -1333,7 +1333,7 @@
               </div>
               <h2 data-i18n="successTitle">Phone Screening Successfully Scheduled!</h2>
               <p data-i18n="successDesc">
-                Thank you! Your initial 10–15 minute phone screening appointment has been registered with our campus director. Our Director will call you directly at your scheduled time.
+                Thank you! Your initial 15-minute phone screening appointment has been registered with our campus director. Our Director will call you directly at your scheduled time.
               </p>
 
               <!-- Dynamic Appointment Summary -->
@@ -1364,7 +1364,7 @@
                 </div>
                 <div class="summary-row">
                   <span class="summary-label" data-i18n="sumFormat">Interview Format:</span>
-                  <span class="summary-value" id="sumFormat">10–15 Min Phone Call</span>
+                  <span class="summary-value" id="sumFormat">15-Min Phone Screening</span>
                 </div>
               </div>
 
@@ -1388,6 +1388,17 @@
                 <div class="checklist-item">
                   <i class="fa-solid fa-circle-check"></i>
                   <span data-i18n="prep3">Prepare any questions you have regarding our curriculum (GELDS), CDA sponsorship, or benefits.</span>
+                </div>
+
+                <!-- KIDazzle CDA Training Program Direct Link -->
+                <div style="margin-top: 16px; padding: 14px; background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 10px;">
+                  <strong style="color: #b45309; font-size: 0.92rem;"><i class="fa-solid fa-graduation-cap"></i> KIDazzle CDA Training &amp; Course Portal:</strong>
+                  <p style="font-size: 0.84rem; color: #92400e; margin: 6px 0 10px 0; line-height: 1.5;">
+                    Interested in advancing your credentials? Learn about our 100% paid CDA &amp; TCC sponsorship program and explore our online training portal.
+                  </p>
+                  <a href="https://KIDazzle.memberships.msgsndr.com/products/7779ed89-7207-410e-bade-8c650aa7fc16" target="_blank" rel="noopener" style="display: inline-block; background: #d97706; color: #ffffff !important; font-size: 0.8rem; font-weight: 800; padding: 8px 16px; border-radius: 6px; text-decoration: none;">
+                    <span style="color: #ffffff !important; font-weight: 800;">Preview CDA Course Portal &rarr;</span>
+                  </a>
                 </div>
 
                 <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e2e8f0;">
@@ -1854,8 +1865,13 @@
 
       const pad = (n) => String(n).padStart(2, '0');
       const startIso = `${year}${month}${day}T${pad(hour)}${pad(minute)}00`;
-      const endHour = hour + 1;
-      const endIso = `${year}${month}${day}T${pad(endHour)}${pad(minute)}00`;
+      let endHour = hour;
+      let endMin = minute + 15;
+      if (endMin >= 60) {
+        endHour += Math.floor(endMin / 60);
+        endMin = endMin % 60;
+      }
+      const endIso = `${year}${month}${day}T${pad(endHour)}${pad(endMin)}00`;
 
       const icsContent = [
         'BEGIN:VCALENDAR',
