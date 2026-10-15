@@ -293,38 +293,7 @@
       flex-shrink: 0;
     }
 
-    /* Nav Tabs */
-    .view-tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
-      background: #e2e8f0;
-      padding: 6px;
-      border-radius: 14px;
-      width: fit-content;
-      max-width: 100%;
-    }
 
-    .view-tab-btn {
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      border: none;
-      background: transparent;
-      color: #475569;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-    }
-
-    .view-tab-btn.active {
-      background: #ffffff;
-      color: #1e3a8a;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-    }
 
     /* Form Container */
     .application-box {
@@ -811,51 +780,7 @@
       font-size: 0.95rem;
     }
 
-    /* Survey Tab Frame */
-    .survey-tab-content {
-      display: none;
-    }
 
-    .survey-tab-content.active {
-      display: block;
-    }
-
-    .survey-card {
-      background: #ffffff;
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-    }
-
-    .survey-top {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 16px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .survey-top-title {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .survey-iframe-container {
-      width: 100%;
-      min-height: 850px;
-    }
-
-    .survey-iframe-container iframe {
-      width: 100%;
-      min-height: 850px;
-      border: none;
-    }
 
     /* Footer */
     .app-footer {
@@ -964,22 +889,15 @@
         <div class="benefit-item">
           <i class="fa-solid fa-hand-holding-dollar"></i>
           <div>
-            <div data-i18n="b1Title">$16.00 – $24.00+ / Hour</div>
-            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b1Sub">Based on CDA, Degree &amp; Experience</span>
+            <div data-i18n="b1Title">$11.00 – $18.00+ / Hour</div>
+            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b1Sub">Dictated by Credential &amp; Degree</span>
           </div>
         </div>
         <div class="benefit-item">
           <i class="fa-solid fa-graduation-cap"></i>
           <div>
-            <div data-i18n="b2Title">100% Paid CDA &amp; TCC</div>
-            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b2Sub">Full credential sponsorship</span>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <i class="fa-solid fa-heart-pulse"></i>
-          <div>
-            <div data-i18n="b3Title">Section 125 Healthcare</div>
-            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b3Sub">Pre-tax medical, dental &amp; vision</span>
+            <div data-i18n="b2Title">100% Credential Training</div>
+            <span style="font-size: 0.76rem; color: #64748b;" data-i18n="b2Sub">Full CDA &amp; TCC sponsorship</span>
           </div>
         </div>
         <div class="benefit-item">
@@ -992,19 +910,7 @@
       </div>
     </section>
 
-    <!-- View Mode Switcher -->
-    <div class="view-tabs">
-      <button class="view-tab-btn active" id="tabQuickApp" onclick="switchView('app')">
-        <i class="fa-solid fa-bolt"></i>
-        <span data-i18n="tabFast">Interactive Application &amp; Calendar</span>
-      </button>
-      <button class="view-tab-btn" id="tabGhlSurvey" onclick="switchView('survey')">
-        <i class="fa-solid fa-clipboard-check"></i>
-        <span data-i18n="tabCorporate">Corporate HR Survey</span>
-      </button>
-    </div>
-
-    <!-- TAB 1: Fast Interactive Application & Calendar Booking -->
+    <!-- Interactive Application & Calendar Booking -->
     <div id="interactiveAppBox" class="application-box">
       <!-- Progress Bar -->
       <div class="form-progress-bar">
@@ -1171,13 +1077,14 @@
               </div>
 
               <div class="form-group">
-                <label class="form-label"><span data-i18n="lblPay">Desired Hourly Pay</span> <span class="req">*</span></label>
+                <label class="form-label"><span data-i18n="lblPay">Desired Hourly Pay (Dictated by Credential &amp; Degree)</span> <span class="req">*</span></label>
                 <select id="desiredPay" class="form-select" required>
-                  <option value="$16.00 - $17.50 / hr">$16.00 – $17.50 / hr (Entry / CDA in progress)</option>
-                  <option value="$18.00 - $20.00 / hr" selected>$18.00 – $20.00 / hr (CDA / TCC Certified)</option>
-                  <option value="$20.00 - $22.50 / hr">$20.00 – $22.50 / hr (Associate Degree ECE)</option>
-                  <option value="$23.00 - $26.00+ / hr">$23.00 – $26.00+ / hr (Bachelor's / Certified Teacher)</option>
-                  <option value="Negotiable based on experience">Negotiable based on experience</option>
+                  <option value="Entry Level ($11.00 - $12.50 / hr)">Entry Level (High School / No Credential) — $11.00 – $12.50 / hr</option>
+                  <option value="CDA Certified ($13.00 - $14.50 / hr)" selected>CDA (Child Development Associate) — $13.00 – $14.50 / hr</option>
+                  <option value="TCC Certified ($14.50 - $16.00 / hr)">TCC (Technical Certificate of Credit) — $14.50 – $16.00 / hr</option>
+                  <option value="Associate Degree ($16.00 - $17.50 / hr)">Associate Degree in Early Childhood — $16.00 – $17.50 / hr</option>
+                  <option value="Bachelor's Degree ($18.00+ / hr)">Bachelor's Degree in ECE / Elementary — $18.00+ / hr</option>
+                  <option value="Georgia Pre-K Certified ($18.00 - $20.00 / hr)">Georgia Pre-K Lead Teacher — $18.00 – $20.00 / hr</option>
                 </select>
               </div>
 
@@ -1209,12 +1116,12 @@
               <div class="form-group">
                 <label class="form-label"><span data-i18n="lblHighestEdu">Highest Level of Education / Credential</span> <span class="req">*</span></label>
                 <select id="credentials" class="form-select" required>
-                  <option value="Child Development Associate (CDA)">Child Development Associate (CDA)</option>
-                  <option value="Technical Certificate of Credit (TCC in ECE)">Technical Certificate of Credit (TCC)</option>
+                  <option value="High School Diploma / GED (Desire CDA Sponsorship)">High School Diploma / GED (Desire CDA Sponsorship)</option>
+                  <option value="Child Development Associate (CDA)" selected>Child Development Associate (CDA)</option>
+                  <option value="Technical Certificate of Credit (TCC in ECE)">Technical Certificate of Credit (TCC in ECE)</option>
                   <option value="Associate Degree in Early Childhood">Associate Degree in Early Childhood</option>
                   <option value="Bachelor's Degree in ECE or Elementary Education">Bachelor's Degree in ECE / Elementary</option>
-                  <option value="Master's Degree in Education">Master's Degree in Education</option>
-                  <option value="High School Diploma / GED (Desire CDA Sponsorship)">High School Diploma / GED (Desire CDA Sponsorship)</option>
+                  <option value="Master's Degree in Education / Leadership">Master's Degree in Education / Leadership</option>
                 </select>
               </div>
 
@@ -1394,10 +1301,10 @@
                 <div style="margin-top: 16px; padding: 14px; background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 10px;">
                   <strong style="color: #b45309; font-size: 0.92rem;"><i class="fa-solid fa-graduation-cap"></i> KIDazzle CDA Training &amp; Course Portal:</strong>
                   <p style="font-size: 0.84rem; color: #92400e; margin: 6px 0 10px 0; line-height: 1.5;">
-                    Interested in advancing your credentials? Learn about our 100% paid CDA &amp; TCC sponsorship program and explore our online training portal.
+                    Interested in advancing your credentials? Learn about our 100% paid CDA &amp; TCC sponsorship program and enroll directly into our sponsored training portal.
                   </p>
-                  <a href="https://KIDazzle.memberships.msgsndr.com/products/7779ed89-7207-410e-bade-8c650aa7fc16" target="_blank" rel="noopener" style="display: inline-block; background: #d97706; color: #ffffff !important; font-size: 0.8rem; font-weight: 800; padding: 8px 16px; border-radius: 6px; text-decoration: none;">
-                    <span style="color: #ffffff !important; font-weight: 800;">Preview CDA Course Portal &rarr;</span>
+                  <a href="https://KIDazzle.memberships.msgsndr.com/offers/436d6890-10f2-43b5-9716-379fd5b67caf" target="_blank" rel="noopener" style="display: inline-block; background: #d97706; color: #ffffff !important; font-size: 0.85rem; font-weight: 800; padding: 10px 18px; border-radius: 8px; text-decoration: none; box-shadow: 0 2px 6px rgba(217, 119, 6, 0.3);">
+                    <span style="color: #ffffff !important; font-weight: 800;">⚡ Enroll in Free CDA Training Program &rarr;</span>
                   </a>
                 </div>
 
@@ -1413,29 +1320,6 @@
           </div>
 
         </form>
-      </div>
-    </div>
-
-    <!-- TAB 2: Embedded Corporate GHL Survey Frame -->
-    <div id="corporateSurveyBox" class="survey-tab-content">
-      <div class="survey-card">
-        <div class="survey-top">
-          <div class="survey-top-title">
-            <i class="fa-solid fa-clipboard-check" style="color: #f59e0b;"></i>
-            <span>KIDazzle Corporate HR Interview Survey</span>
-          </div>
-          <div style="font-size: 0.8rem; color: #94a3b8;">
-            <i class="fa-solid fa-shield-halved" style="color: #10b981; margin-right: 4px;"></i> Secure GHL Endpoint
-          </div>
-        </div>
-        <div class="survey-iframe-container">
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/survey/BOYM2PBNfJB2l53T8Wq9?notrack=true"
-            id="BOYM2PBNfJB2l53T8Wq9"
-            title="KIDazzle Educator Application & HR Interview">
-          </iframe>
-          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-        </div>
       </div>
     </div>
 
@@ -1517,16 +1401,12 @@
         heroBadge: "Official Hiring & Careers",
         heroTitle: "Inspire, Educate & Grow With KIDazzle",
         heroDesc: "Join Georgia, Tennessee & Florida's premier early education community. We are currently interviewing lead teachers, assistant educators, infant caregivers, and nutrition staff. Complete this quick 3-minute application to schedule your direct interview with our campus directors.",
-        b1Title: "$16.00 – $24.00+ / Hour",
-        b1Sub: "Based on CDA, Degree & Experience",
-        b2Title: "100% Paid CDA & TCC",
-        b2Sub: "Full credential sponsorship",
-        b3Title: "Section 125 Healthcare",
-        b3Sub: "Pre-tax medical, dental & vision",
+        b1Title: "$11.00 – $18.00+ / Hour",
+        b1Sub: "Dictated by Credential & Degree",
+        b2Title: "100% Credential Training",
+        b2Sub: "Full CDA & TCC sponsorship",
         b4Title: "Quality Rated Star 3",
         b4Sub: "NAEYC aligned curriculum",
-        tabFast: "Interactive Application & Calendar",
-        tabCorporate: "Corporate HR Survey",
         st1: "Contact",
         st2: "Campus & Role",
         st3: "Qualifications",
@@ -1545,7 +1425,7 @@
         s2Desc: "Select the KIDazzle location where you would like to work. Your interview will be scheduled directly with that campus director.",
         lblSelectCampus: "Select Preferred Campus",
         lblPosition: "Target Position",
-        lblPay: "Desired Hourly Pay",
+        lblPay: "Desired Hourly Pay (Dictated by Credential & Degree)",
         lblStartDate: "Available Start Date",
         btnBack: "Back",
         btnNextStep3: "Continue to Qualifications",
@@ -1587,16 +1467,12 @@
         heroBadge: "Portal Oficial de Empleo y Carreras",
         heroTitle: "Inspira, Educa y Crece Con KIDazzle",
         heroDesc: "Únete a la mejor comunidad de educación temprana en Georgia, Tennessee y Florida. Estamos entrevistando maestras principales, asistentes, cuidadoras de infantes y personal de cocina. Completa esta solicitud de 3 minutos para programar tu entrevista directa.",
-        b1Title: "$16.00 – $24.00+ / Hora",
-        b1Sub: "Según credencial CDA, título y experiencia",
-        b2Title: "CDA y TCC 100% Pagados",
-        b2Sub: "Patrocinio completo de credenciales",
-        b3Title: "Beneficios de Salud Sección 125",
-        b3Sub: "Médico, dental y visión antes de impuestos",
+        b1Title: "$11.00 – $18.00+ / Hora",
+        b1Sub: "Según credencial y título universitario",
+        b2Title: "Capacitación 100% Gratuita",
+        b2Sub: "Patrocinio total para CDA y TCC",
         b4Title: "Calidad Calificada 3 Estrellas",
         b4Sub: "Currículo alineado con estándares NAEYC",
-        tabFast: "Solicitud Rápida y Calendario",
-        tabCorporate: "Encuesta Corporativa de RRHH",
         st1: "Contacto",
         st2: "Campus y Puesto",
         st3: "Calificaciones",
@@ -1615,7 +1491,7 @@
         s2Desc: "Seleccione el campus de KIDazzle donde desea trabajar. Su entrevista se programará directamente con la directora.",
         lblSelectCampus: "Seleccione el Campus Preferido",
         lblPosition: "Puesto Solicitado",
-        lblPay: "Pago por Hora Deseado",
+        lblPay: "Pago por Hora Deseado (Según Credencial y Título)",
         lblStartDate: "Posible Fecha de Inicio",
         btnBack: "Atrás",
         btnNextStep3: "Continuar a Calificaciones",
@@ -1700,25 +1576,6 @@
         if (card) selectCampus(loc.toLowerCase(), card);
       }
     });
-
-    function switchView(mode) {
-      const appBox = document.getElementById('interactiveAppBox');
-      const surveyBox = document.getElementById('corporateSurveyBox');
-      const btnApp = document.getElementById('tabQuickApp');
-      const btnSurvey = document.getElementById('tabGhlSurvey');
-
-      if (mode === 'app') {
-        appBox.style.display = 'block';
-        surveyBox.style.display = 'none';
-        btnApp.classList.add('active');
-        btnSurvey.classList.remove('active');
-      } else {
-        appBox.style.display = 'none';
-        surveyBox.style.display = 'block';
-        btnSurvey.classList.add('active');
-        btnApp.classList.remove('active');
-      }
-    }
 
     function selectCampus(key, cardEl) {
       currentCampusKey = key;
