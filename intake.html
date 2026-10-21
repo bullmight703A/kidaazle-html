@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIDazzle Early Learning Academy | VIP Pre-Enrollment & Campus Tour Intake</title>
+  <meta name="description" content="Secure your child's priority enrollment at KIDazzle Early Learning Centers. 3-Star Quality Rated infant, toddler, preschool, and Georgia Pre-K programs across 7 Southeast campuses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #0f172a;
+      --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --accent-light: #fef3c7;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --surface: #ffffff;
+      --surface-card: #f8fafc;
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 12px 30px -10px rgba(30, 58, 138, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      background-image: 
+        radial-gradient(at 10% 10%, rgba(30, 58, 138, 0.06) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(245, 158, 11, 0.06) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .app-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .brand-logo-badge {
+      background: #ffffff;
+      color: #1e3a8a;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 20px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: #cbd5e1;
+      font-weight: 500;
+      display: block;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: background 0.2s;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 32px auto 48px auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .hero-banner {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fef3c7;
+      color: #b45309;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 16px;
+      border-radius: 30px;
+      border: 1px solid #fde68a;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 15.5px;
+      color: #64748b;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Disclaimer Scarcity Card */
+    .ratio-disclaimer-card {
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      border-left: 5px solid #2563eb;
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .disclaimer-icon {
+      font-size: 24px;
+      color: #2563eb;
+      margin-top: 2px;
+    }
+
+    .disclaimer-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .disclaimer-text {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    /* Form Container */
+    .form-card {
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .form-progress-bar {
+      display: flex;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .progress-step {
+      flex: 1;
+      padding: 14px 16px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-right: 1px solid var(--border);
+    }
+
+    .progress-step:last-child {
+      border-right: none;
+    }
+
+    .progress-step.active {
+      background: #ffffff;
+      color: #1e3a8a;
+      border-bottom: 3px solid #2563eb;
+    }
+
+    .progress-step.completed {
+      color: #10b981;
+    }
+
+    .form-body {
+      padding: 32px;
+    }
+
+    @media (max-width: 640px) {
+      .form-body {
+        padding: 20px;
+      }
+      .hero-title {
+        font-size: 26px;
+      }
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: #2563eb;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    label .req {
+      color: #ef4444;
+    }
+
+    input, select, textarea {
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 14.5px;
+      font-family: inherit;
+      color: #0f172a;
+      background: #ffffff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    /* Radio Choice Cards */
+    .choice-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .choice-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .choice-card {
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #ffffff;
+    }
+
+    .choice-card:hover {
+      border-color: #93c5fd;
+      background: #f8fafc;
+    }
+
+    .choice-card.selected {
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+
+    .choice-card input[type="radio"] {
+      margin-top: 3px;
+    }
+
+    .choice-content h5 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .choice-content p {
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.35;
+    }
+
+    /* Calendar Step */
+    .calendar-container {
+      display: none;
+      margin-top: 20px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .time-slot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .time-slot-btn {
+      padding: 10px;
+      text-align: center;
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .time-slot-btn:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    .time-slot-btn.selected {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0f172a;
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 16px;
+      border: none;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s;
+      margin-top: 20px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.5);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Confirmation Modal / State */
+    .confirmation-view {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .conf-icon {
+      font-size: 56px;
+      color: #10b981;
+      margin-bottom: 16px;
+    }
+
+    .conf-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .conf-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      max-width: 500px;
+      margin: 24px auto;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .conf-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed #cbd5e1;
+    }
+
+    .conf-row:last-child {
+      border-bottom: none;
+    }
+
+    .conf-row span:first-child {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .conf-row span:last-child {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: auto;
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 24px;
+      font-size: 12.5px;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <a href="/" class="header-brand">
+      <div class="brand-logo-badge">KD</div>
+      <div>
+        <div class="brand-title">KIDazzle Early Learning Academy</div>
+        <span class="brand-subtitle">VIP Pre-Enrollment & Campus Tour Engine</span>
+      </div>
+    </a>
+    <div class="header-contact">
+      <a href="tel:18774101002" class="contact-link">
+        <i class="fa-solid fa-phone"></i> (877) 410-1002
+      </a>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <main class="container">
+    
+    <div class="hero-banner">
+      <div class="hero-pill">
+        <i class="fa-solid fa-award"></i> Quality Rated Star 3 &bull; State Licensed Centers
+      </div>
+      <h1 class="hero-title">VIP Pre-Enrollment & Tour Reservation</h1>
+      <p class="hero-subtitle">
+        Reserve your child's classroom placement and schedule your Director walkthrough across our 7 premier Southeast campuses.
+      </p>
+    </div>
+
+    <!-- Official Ratio & Scarcity Disclaimer -->
+    <div class="ratio-disclaimer-card">
+      <div class="disclaimer-icon">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div>
+        <div class="disclaimer-title">Official Notice Regarding State Classroom Ratios</div>
+        <div class="disclaimer-text">
+          To maintain Georgia DECAL and Tennessee DHS 3-Star Quality Rated educator-to-child ratios, classroom capacity is strictly capped. Submitting this pre-enrollment application secures your priority queue position for Director review, but does not guarantee enrollment until physical campus walkthrough and documentation verification.
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Intake Card -->
+    <div class="form-card">
+      
+      <div class="form-progress-bar">
+        <div class="progress-step active" id="prog-step-1">
+          <i class="fa-solid fa-1"></i> Child & Parent Details
+        </div>
+        <div class="progress-step" id="prog-step-2">
+          <i class="fa-solid fa-2"></i> Campus Walkthrough
+        </div>
+        <div class="progress-step" id="prog-step-3">
+          <i class="fa-solid fa-check"></i> Priority Confirmation
+        </div>
+      </div>
+
+      <!-- Form View -->
+      <form id="intake-form" class="form-body">
+        
+        <!-- Section: Campus Selection -->
+        <div class="section-title">
+          <i class="fa-solid fa-location-dot"></i> 1. Select Your Target Campus
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="campus">Campus Location <span class="req">*</span></label>
+            <select id="campus" name="campus" required>
+              <option value="collegepark">Little Flyers College Park &bull; 1901 Phoenix Blvd, College Park, GA 30349</option>
+              <option value="westend" selected>Historic West End Atlanta &bull; 840 Ralph David Abernathy Blvd SW, Atlanta, GA 30310</option>
+              <option value="summit">Peachtree Summit Midtown &bull; 401 W Peachtree St NW, Atlanta, GA 30308</option>
+              <option value="afc">Atlanta Federal Center (AFC Downtown) &bull; 61 Forsyth St SW, Atlanta, GA 30303</option>
+              <option value="hampton">Hampton FAA Center &bull; 13600 Burks Rd, Hampton, GA 30228</option>
+              <option value="memphis">Memphis Flying Start (FAA Center) &bull; 3229 Democrat Rd, Memphis, TN 38118</option>
+              <option value="miami">Tailwinds Development Center (Miami FAA) &bull; 8420 NW 53rd St, Doral, FL 33166</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Section: Parent Information -->
+        <div class="section-title">
+          <i class="fa-solid fa-user"></i> 2. Parent / Guardian Information
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="parentFirstName">First Name <span class="req">*</span></label>
+            <input type="text" id="parentFirstName" name="parentFirstName" placeholder="e.g. Sarah" required>
+          </div>
+          <div class="form-group">
+            <label for="parentLastName">Last Name <span class="req">*</span></label>
+            <input type="text" id="parentLastName" name="parentLastName" placeholder="e.g. Jenkins" required>
+          </div>
+          <div class="form-group">
+            <label for="parentPhone">Mobile Phone (For Tour SMS) <span class="req">*</span></label>
+            <input type="tel" id="parentPhone" name="parentPhone" placeholder="(404) 555-0199" required>
+          </div>
+          <div class="form-group">
+            <label for="parentEmail">Email Address <span class="req">*</span></label>
+            <input type="email" id="parentEmail" name="parentEmail" placeholder="sarah.jenkins@example.com" required>
+          </div>
+        </div>
+
+        <!-- Section: Child & Program -->
+        <div class="section-title">
+          <i class="fa-solid fa-children"></i> 3. Child Information & Classroom Needed
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="childName">Child's Full Name <span class="req">*</span></label>
+            <input type="text" id="childName" name="childName" placeholder="e.g. Noah Jenkins" required>
+          </div>
+          <div class="form-group">
+            <label for="childDob">Child's Date of Birth (or Age) <span class="req">*</span></label>
+            <input type="text" id="childDob" name="childDob" placeholder="MM/DD/YYYY or e.g. 2 Years Old" required>
+          </div>
+          <div class="form-group">
+            <label for="programNeeded">Program / Classroom <span class="req">*</span></label>
+            <select id="programNeeded" name="programNeeded" required>
+              <option value="Infant (6 Wks - 12 Mos)">Infant Care (6 Weeks – 12 Months)</option>
+              <option value="Toddler (1 Year Old)">Toddler Classroom (1-Year-Old)</option>
+              <option value="Early Preschool (2 Years Old)" selected>Early Preschool (2-Years-Old)</option>
+              <option value="Preschool (3 Years Old)">Preschool (3-Years-Old)</option>
+              <option value="Georgia Lottery Pre-K (4 Years Old)">Georgia Lottery Pre-K (Free GA Lottery / 4yo)</option>
+              <option value="School-Age Before & After">School-Age Before & After School</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="desiredStartDate">Desired Start Date <span class="req">*</span></label>
+            <select id="desiredStartDate" name="desiredStartDate" required>
+              <option value="Immediate">Immediate / This Week</option>
+              <option value="Within 2 Weeks">Within Next 2 Weeks</option>
+              <option value="Next Month">Next Month</option>
+              <option value="Future Semester">Future Semester / Waitlist</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="fundingType">Tuition & Funding Preference <span class="req">*</span></label>
+            <select id="fundingType" name="fundingType" required>
+              <option value="Private Pay">Private Pay / Self-Pay</option>
+              <option value="Georgia CAPS Subsidy">Georgia CAPS Subsidy / State Childcare Certificate</option>
+              <option value="Bright from the Start Voucher">Bright from the Start / State Subsidy Voucher</option>
+              <option value="Federal / FAA Corporate Subsidy">Federal / FAA Employee Subsidy (AFC / Memphis / Miami)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Section: Tour Status Selector (Director Hill's Option) -->
+        <div class="section-title">
+          <i class="fa-solid fa-calendar-check"></i> 4. Campus Tour Status
+        </div>
+
+        <div class="choice-cards">
+          <label class="choice-card selected" id="card-need-tour">
+            <input type="radio" name="hasToured" value="need_tour" checked>
+            <div class="choice-content">
+              <h5>🗓️ Schedule a Campus Tour & Walkthrough</h5>
+              <p>Recommended. Meet the Center Director, visit the classroom, and observe teacher interactions.</p>
+            </div>
+          </label>
+
+          <label class="choice-card" id="card-already-toured">
+            <input type="radio" name="hasToured" value="already_toured">
+            <div class="choice-content">
+              <h5>✅ I Have Already Toured / Spoke with Director</h5>
+              <p>Fast-track. Skip scheduling and alert the Director to prepare the enrollment paperwork immediately.</p>
+            </div>
+          </label>
+        </div>
+
+        <!-- Calendar Picker Section (Revealed when 'need_tour' is selected) -->
+        <div id="calendar-step" class="calendar-container" style="display: block;">
+          <h4 style="font-family:'Outfit', sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">
+            Select Tour Date & Time Slot
+          </h4>
+          <p style="font-size:13px; color:#64748b; margin-bottom:16px;">
+            Director walkthroughs are held Mon–Fri during active learning hours.
+          </p>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="tourDate">Select Tour Date <span class="req">*</span></label>
+              <input type="date" id="tourDate" name="tourDate">
+            </div>
+            <div class="form-group">
+              <label>Select Arrival Time Slot <span class="req">*</span></label>
+              <div class="time-slot-grid" id="time-slot-container">
+                <div class="time-slot-btn" data-time="09:30 AM">09:30 AM</div>
+                <div class="time-slot-btn selected" data-time="10:30 AM">10:30 AM</div>
+                <div class="time-slot-btn" data-time="11:30 AM">11:30 AM</div>
+                <div class="time-slot-btn" data-time="01:30 PM">01:30 PM</div>
+                <div class="time-slot-btn" data-time="02:30 PM">02:30 PM</div>
+                <div class="time-slot-btn" data-time="03:30 PM">03:30 PM</div>
+              </div>
+              <input type="hidden" id="tourTimeSlot" name="tourTimeSlot" value="10:30 AM">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full-width" style="margin-top:16px;">
+          <label for="specialNotes">Special Inquiries, Dietary Allergies, or Potty-Training Notes (Optional)</label>
+          <textarea id="specialNotes" name="specialNotes" rows="2" placeholder="Let our Director know of any specific needs..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btn-submit-intake">
+          <span>🚀 Submit Priority Application & Lock In Tour</span>
+        </button>
+
+        <p style="font-size:11.5px; color:#94a3b8; text-align:center; margin-top:12px;">
+          🔒 256-Bit SSL Encrypted. Director Robert Hill & Campus Directors receive your application instantly.
+        </p>
+      </form>
+
+      <!-- Confirmation Screen -->
+      <div id="confirmation-screen" class="confirmation-view">
+        <div class="conf-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2 class="conf-title">Application Confirmed &amp; Queued!</h2>
+        <p style="font-size:15px; color:#475569; max-width:560px; margin:0 auto;" id="conf-lead-msg">
+          Director Robert Hill and our Campus Director have received your pre-enrollment application.
+        </p>
+
+        <div class="conf-card">
+          <div class="conf-row">
+            <span>Child:</span>
+            <span id="res-child-name">—</span>
+          </div>
+          <div class="conf-row">
+            <span>Target Campus:</span>
+            <span id="res-campus-name">—</span>
+          </div>
+          <div class="conf-row">
+            <span>Program:</span>
+            <span id="res-program">—</span>
+          </div>
+          <div class="conf-row">
+            <span>Funding:</span>
+            <span id="res-funding">—</span>
+          </div>
+          <div class="conf-row" id="row-tour-time">
+            <span>Tour Walkthrough:</span>
+            <span id="res-tour-datetime" style="color:#d97706;">—</span>
+          </div>
+          <div class="conf-row">
+            <span>Director Status:</span>
+            <span style="color:#10b981;">Priority Queue Active</span>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;">
+          <a href="/" style="display:inline-block; background:#1e3a8a; color:#ffffff; font-weight:700; text-decoration:none; padding:12px 24px; border-radius:10px; font-size:14px;">
+            Return to KIDazzle Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 KIDazzle Early Learning Centers. All rights reserved.</p>
+    <p style="margin-top:6px;">
+      <a href="/privacy">Privacy Policy</a> &bull;
+      <a href="/licensing">State Licensing &amp; DECAL</a> &bull;
+      <a href="/careers">Careers &amp; Educator Hiring</a>
+    </p>
+  </footer>
+
+  <script>
+    // Set default tour date to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    // If weekend, advance to Monday
+    if (tomorrow.getDay() === 6) tomorrow.setDate(tomorrow.getDate() + 2);
+    if (tomorrow.getDay() === 0) tomorrow.setDate(tomorrow.getDate() + 1);
+    
+    const yyyy = tomorrow.getFullYear();
+    const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+    const dd = String(tomorrow.getDate()).padStart(2, '0');
+    const dateInput = document.getElementById('tourDate');
+    if (dateInput) {
+      dateInput.value = `${yyyy}-${mm}-${dd}`;
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+    }
+
+    // Phone Auto-Formatter: (XXX) XXX-XXXX
+    const phoneInput = document.getElementById('parentPhone');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', (e) => {
+        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+      });
+    }
+
+    // Radio Card Toggles (Need Tour vs Already Toured)
+    const cardNeed = document.getElementById('card-need-tour');
+    const cardAlready = document.getElementById('card-already-toured');
+    const calendarStep = document.getElementById('calendar-step');
+    const btnSubmit = document.getElementById('btn-submit-intake');
+    const progStep2 = document.getElementById('prog-step-2');
+
+    document.querySelectorAll('input[name="hasToured"]').forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        if (e.target.value === 'need_tour') {
+          cardNeed.classList.add('selected');
+          cardAlready.classList.remove('selected');
+          calendarStep.style.display = 'block';
+          btnSubmit.innerHTML = '<span>🚀 Submit Priority Application & Lock In Tour</span>';
+          progStep2.style.display = 'flex';
+        } else {
+          cardAlready.classList.add('selected');
+          cardNeed.classList.remove('selected');
+          calendarStep.style.display = 'none';
+          btnSubmit.innerHTML = '<span>📋 Submit Priority Application for Immediate Enrollment</span>';
+          progStep2.style.display = 'none';
+        }
+      });
+    });
+
+    // Time Slot Selection
+    document.querySelectorAll('.time-slot-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.time-slot-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        document.getElementById('tourTimeSlot').value = btn.getAttribute('data-time');
+      });
+    });
+
+    // Campus Pre-select from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const campusParam = urlParams.get('campus');
+    if (campusParam) {
+      const select = document.getElementById('campus');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.toLowerCase().includes(campusParam.toLowerCase())) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    // Form Submission
+    const form = document.getElementById('intake-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '<span>⏳ Processing Priority Application...</span>';
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch('/api/parent-intake', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          // Switch to confirmation view
+          form.style.display = 'none';
+          document.getElementById('prog-step-1').classList.remove('active');
+          document.getElementById('prog-step-1').classList.add('completed');
+          document.getElementById('prog-step-2').classList.remove('active');
+          document.getElementById('prog-step-2').classList.add('completed');
+          document.getElementById('prog-step-3').classList.add('active');
+
+          document.getElementById('confirmation-screen').style.display = 'block';
+          document.getElementById('res-child-name').innerText = payload.childName;
+          document.getElementById('res-campus-name').innerText = data.campus || payload.campus;
+          document.getElementById('res-program').innerText = payload.programNeeded;
+          document.getElementById('res-funding').innerText = payload.fundingType;
+          
+          if (payload.hasToured === 'already_toured') {
+            document.getElementById('row-tour-time').style.display = 'none';
+            document.getElementById('conf-lead-msg').innerText = `Your application for ${payload.childName} has been transmitted directly to our Campus Director. We are preparing your enrollment packet now!`;
+          } else {
+            document.getElementById('row-tour-time').style.display = 'flex';
+            document.getElementById('res-tour-datetime').innerText = `${payload.tourDate} at ${payload.tourTimeSlot}`;
+            document.getElementById('conf-lead-msg').innerText = `Your walkthrough for ${payload.childName} is reserved for ${payload.tourDate} at ${payload.tourTimeSlot}. An email and calendar invite have been dispatched!`;
+          }
+
+          window.scrollTo({ top: 100, behavior: 'smooth' });
+        } else {
+          alert('Submission error: ' + (data.error || 'Please try again or call us.'));
+          btnSubmit.disabled = false;
+          btnSubmit.innerHTML = '<span>🚀 Submit Priority Application & Lock In Tour</span>';
+        }
+      } catch (err) {
+        alert('Network connection error. Please call our admissions office directly at (877) 410-1002.');
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = '<span>🚀 Submit Priority Application & Lock In Tour</span>';
+      }
+    });
+  </script>
+
+</body>
+</html>
